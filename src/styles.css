@@ -1,0 +1,200 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Darul-ilm Chatham design system.
+ * Colours taken straight from the logo: white field, ink lettering (#010101),
+ * royal quill blue (#207BF8) and lighter quill blue (#3BB9FC).
+ */
+
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-navy-foreground: var(--navy-foreground);
+  --color-sky: var(--sky);
+  --color-sky-soft: var(--sky-soft);
+  --color-sand: var(--sand);
+  --color-gold: var(--gold);
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.875rem;
+
+  --navy: oklch(0.26 0.06 250);
+  --navy-deep: oklch(0.2 0.05 250);
+  --navy-foreground: oklch(0.985 0.006 258);
+  --sky: oklch(0.63 0.18 253);
+  --sky-soft: oklch(0.96 0.025 250);
+  --sand: oklch(0.975 0.006 250);
+  --gold: oklch(0.68 0.11 72);
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.24 0.045 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.045 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.03 258);
+  --primary: oklch(0.6 0.19 253);
+  --primary-foreground: oklch(0.985 0.006 258);
+  --secondary: oklch(0.96 0.025 250);
+  --secondary-foreground: oklch(0.26 0.06 250);
+  --muted: oklch(0.965 0.008 258);
+  --muted-foreground: oklch(0.52 0.04 258);
+  --accent: oklch(0.63 0.18 253);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.9 0.018 258);
+  --input: oklch(0.9 0.018 258);
+  --ring: oklch(0.72 0.15 245);
+
+  --shadow-panel: 0 20px 50px -28px oklch(0.26 0.06 250 / 0.28);
+  --gradient-hero: linear-gradient(160deg, oklch(0.985 0.012 250) 0%, oklch(0.95 0.03 250) 55%, oklch(1 0 0) 100%);
+
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility band-navy {
+  background-color: var(--navy);
+  color: var(--navy-foreground);
+}
+
+@utility heading-xl {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+}
+
+@utility heading-lg {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+}
+
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sky);
+
+  &::before {
+    content: "";
+    width: 1.5rem;
+    height: 2px;
+    background-color: var(--gold);
+  }
+}
+
+@utility btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 0.85rem 1.75rem;
+  font-weight: 600;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  transition: filter 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    filter: brightness(1.08);
+  }
+}
+
+@utility btn-pill-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 0.85rem 1.75rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  color: var(--navy);
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--secondary);
+  }
+}
+
+@utility band-hero {
+  background-image: var(--gradient-hero);
+}
+
+@utility rule-accent {
+  &::before {
+    content: "";
+    display: block;
+    width: 3.5rem;
+    height: 3px;
+    background-color: var(--gold);
+    margin-bottom: 1rem;
+  }
+}
+
+@utility panel-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-panel);
+}
