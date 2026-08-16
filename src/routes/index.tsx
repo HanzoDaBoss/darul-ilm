@@ -55,7 +55,7 @@ function Home() {
             <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6">
               {[
                 { k: "2017", v: "Founded with 5 students" },
-                { k: "2", v: "Campuses across Medway" },
+                { k: "2", v: "Branches across Medway" },
                 { k: "5–16", v: "Ages welcomed" },
               ].map((stat) => (
                 <div key={stat.k}>
