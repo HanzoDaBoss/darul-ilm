@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageBanner } from "@/components/page-banner";
-import classroom from "@/assets/classroom.jpg";
+import classroom from "@/assets/darul-ilm-stock-photo-1.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -31,35 +31,35 @@ function About() {
       <SiteHeader />
       <PageBanner
         title="About Us"
+        eyebrow="Our story"
         subtitle="An established Islamic educational institute serving the Medway community."
       />
 
       <section className="mx-auto max-w-4xl px-6 py-16">
         <h2 className="heading-lg rule-accent text-primary">About us</h2>
         <p className="mt-3 text-muted-foreground">
-          Darul-ilm Chatham is an established Islamic educational institute that is keen to
-          deliver a high standard of Islamic education to the entire Medway community to
-          create a community founded upon Islamic knowledge and values.
+          Darul-ilm Chatham is an established Islamic educational institute that is keen to deliver
+          a high standard of Islamic education to the entire Medway community to create a community
+          founded upon Islamic knowledge and values.
         </p>
 
         <h2 className="heading-lg rule-accent mt-12 text-primary">Our aim</h2>
         <p className="mt-3 text-muted-foreground">
-          Our aim is to fulfil the religious educational needs of Medway and surrounding
-          areas by establishing a professional, high quality Islamic educational institute
-          run by qualified Islamic scholars.
+          Our aim is to fulfil the religious educational needs of Medway and surrounding areas by
+          establishing a professional, high quality Islamic educational institute run by qualified
+          Islamic scholars.
         </p>
 
         <h2 className="heading-lg rule-accent mt-12 text-primary">Our roadmap</h2>
         <p className="mt-3 text-muted-foreground">
-          Darul-ilm Chatham began with only five children in January 2017 in our home on
-          Pagitt Street, Chatham. By February 2020 we had grown to more than a hundred
-          children which then led us to moving to a slightly larger property to accommodate
-          for our students.
+          Darul-ilm Chatham began with only five children in January 2017 in our home on Pagitt
+          Street, Chatham. By February 2020 we had grown to more than a hundred children which then
+          led us to moving to a slightly larger property to accommodate for our students.
         </p>
         <p className="mt-4 text-muted-foreground">
-          By the grace of Almighty Allah, in May 2022 we were able to relocate our
-          educational facilities to the Chatham Hill Masjid where we continue to develop our
-          educational facilities and serve the Medway community.
+          By the grace of Almighty Allah, in May 2022 we were able to relocate our educational
+          facilities to the Chatham Hill Masjid where we continue to develop our educational
+          facilities and serve the Medway community.
         </p>
 
         <img

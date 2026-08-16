@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageBanner } from "@/components/page-banner";
+import { ApplicationForm } from "@/components/application-form";
 
 export const Route = createFileRoute("/classes")({
   head: () => ({
@@ -56,18 +57,19 @@ function Classes() {
       <SiteHeader />
       <PageBanner
         title="Class Information & Application"
+        eyebrow="Info"
         subtitle="Children's madrasah classes at Chatham Hill Masjid."
       />
 
       <section className="mx-auto max-w-4xl px-6 pt-14">
         <div className="rounded-lg border-l-4 border-accent bg-secondary p-6">
           <p className="font-display text-xl uppercase leading-snug text-primary">
-            Please note that we currently do not have spaces in the majority of our classes.
-            Please fill in the form to join our waiting list.
+            Please note that we currently do not have spaces in the majority of our classes. Please
+            fill in the form to join our waiting list.
           </p>
           <p className="mt-3 text-sm text-muted-foreground">
-            Teachers needed! If you would like to get involved with helping the school
-            through volunteering, teaching or any other way, please do get in touch.
+            Teachers needed! If you would like to get involved with helping the school through
+            volunteering, teaching or any other way, please do get in touch.
           </p>
         </div>
       </section>
@@ -103,28 +105,21 @@ function Classes() {
             </li>
           ))}
         </ul>
+      </section>
 
-        <h2 className="heading-lg rule-accent mt-14 text-primary">Apply / join the waiting list</h2>
-        <p className="mt-3 text-muted-foreground">
-          Registration is handled through our online registration portal. Please provide the
-          details of your child or children and a member of our team will be in touch.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <a
-            href="https://registrations.ibuk.org/DarulilmKMWA"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center rounded-md bg-primary px-6 py-3 font-display text-lg uppercase tracking-wide text-primary-foreground transition-colors hover:bg-navy-deep"
-          >
-            Registration form
-          </a>
-          <a
-            href="mailto:Info@darulilmchatham.com"
-            className="inline-flex items-center rounded-md border-2 border-primary px-6 py-3 font-display text-lg uppercase tracking-wide text-primary transition-colors hover:bg-secondary"
-          >
-            Email an enquiry
-          </a>
+      <section className="bg-sand mx-auto  px-6 py-14" id="apply">
+        <div className=" text-center">
+          <span className="eyebrow">Apply today</span>
+          <h2 className="heading-lg mt-4 text-primary">
+            Register a place or join the waiting list
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+            Fill in the form below and a member of the Darul-ilm team will be in touch. Since most
+            classes are currently full, most applications will join our waiting list.
+          </p>
         </div>
+
+        <ApplicationForm />
       </section>
 
       <SiteFooter />

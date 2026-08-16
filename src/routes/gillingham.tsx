@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -32,14 +32,15 @@ function Gillingham() {
     <div className="min-h-screen">
       <SiteHeader />
       <PageBanner
-        title="New Darul-ilm branch opening in KMWA, Gillingham"
+        title="Gillingham KMWA Branch "
+        eyebrow="New branch"
         subtitle="A place where young hearts connect with the Qur'an and Deen."
       />
 
       <section className="mx-auto max-w-4xl px-6 py-16">
         <p className="font-semibold text-primary">
-          Alhamdulillah! We're excited to announce the opening of our new Darul-ilm branch at
-          KMWA, Canterbury Street, Gillingham.
+          Alhamdulillah! We're excited to announce the opening of our new Darul-ilm branch at KMWA,
+          Canterbury Street, Gillingham.
         </p>
 
         <h2 className="heading-lg rule-accent mt-10 text-primary">What we offer</h2>
@@ -78,17 +79,13 @@ function Gillingham() {
           ].map(([label, price]) => (
             <li key={label} className="panel-card p-5 text-center">
               <span className="block font-display text-2xl text-accent">{price}</span>
-              <span className="mt-1 block text-xs text-muted-foreground">
-                {label} / month
-              </span>
+              <span className="mt-1 block text-xs text-muted-foreground">{label} / month</span>
             </li>
           ))}
         </ul>
 
         <h2 className="heading-lg rule-accent mt-14 text-primary">Location</h2>
-        <p className="mt-3 text-muted-foreground">
-          KMWA, 114 Canterbury St, Gillingham ME7 5UH
-        </p>
+        <p className="mt-3 text-muted-foreground">KMWA, 114 Canterbury St, Gillingham ME7 5UH</p>
 
         <h2 className="heading-lg rule-accent mt-14 text-primary">Enquiries & enrolment</h2>
         <ul className="mt-3 space-y-2 text-muted-foreground">
@@ -116,12 +113,11 @@ function Gillingham() {
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a
-            href="https://registrations.ibuk.org/DarulilmKMWA"
-            target="_blank"
+            href="/classes#apply"
             rel="noreferrer"
             className="inline-flex items-center rounded-md bg-primary px-6 py-3 font-display text-lg uppercase tracking-wide text-primary-foreground transition-colors hover:bg-navy-deep"
           >
-            Application form
+            Apply
           </a>
           <a
             href="https://forms.gle/bn3QW22ws5RraHCL6"
@@ -133,8 +129,8 @@ function Gillingham() {
           </a>
         </div>
         <p className="mt-4 text-sm text-muted-foreground">
-          Male and female teachers needed! If you are interested in applying, please register
-          your interest using the link above.
+          Male and female teachers needed! If you are interested in applying, please register your
+          interest using the link above.
         </p>
       </section>
 

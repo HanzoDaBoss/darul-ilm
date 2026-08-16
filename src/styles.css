@@ -1,4 +1,4 @@
-@import "tailwindcss" source(none);
+@import "tailwindcss";
 @source "../src";
 @import "tw-animate-css";
 
@@ -9,7 +9,6 @@
  * Colours taken straight from the logo: white field, ink lettering (#010101),
  * royal quill blue (#207BF8) and lighter quill blue (#3BB9FC).
  */
-
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -80,8 +79,12 @@
   --ring: oklch(0.72 0.15 245);
 
   --shadow-panel: 0 20px 50px -28px oklch(0.26 0.06 250 / 0.28);
-  --gradient-hero: linear-gradient(160deg, oklch(0.985 0.012 250) 0%, oklch(0.95 0.03 250) 55%, oklch(1 0 0) 100%);
-
+  --gradient-hero: linear-gradient(
+    160deg,
+    oklch(0.985 0.012 250) 0%,
+    oklch(0.95 0.03 250) 55%,
+    oklch(1 0 0) 100%
+  );
 }
 
 @layer base {
@@ -153,7 +156,9 @@
   font-weight: 600;
   background-color: var(--primary);
   color: var(--primary-foreground);
-  transition: filter 0.2s ease, transform 0.2s ease;
+  transition:
+    filter 0.2s ease,
+    transform 0.2s ease;
 
   &:hover {
     filter: brightness(1.08);
@@ -197,4 +202,34 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-panel);
+}
+
+.welcome-animation {
+  animation: fadeInScale 0.8s ease-out forwards;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.welcome-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

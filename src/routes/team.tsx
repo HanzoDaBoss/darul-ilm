@@ -58,6 +58,7 @@ function Team() {
       <SiteHeader />
       <PageBanner
         title="The Darul-ilm Team"
+        eyebrow="Our team"
         subtitle="Our classes are taught by experienced, qualified teachers."
       />
 
@@ -70,9 +71,7 @@ function Team() {
               <p className="mt-1 font-display text-base uppercase tracking-[0.2em] text-accent">
                 {teacher.role}
               </p>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                {teacher.bio}
-              </p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{teacher.bio}</p>
             </article>
           ))}
         </div>

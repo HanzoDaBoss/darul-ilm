@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import quranClass from "@/assets/quran-class.jpg";
-import classroom from "@/assets/classroom.jpg";
+import classroom from "@/assets/darul-ilm-stock-photo-1.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,21 +33,21 @@ function Home() {
       <section className="band-hero">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-[1.05fr_0.95fr] md:py-28">
           <div>
-            <p className="eyebrow">Darul-ilm Chatham · Est. 2017</p>
-            <h1 className="heading-xl mt-5 text-navy">
-              Rooted in <span className="italic text-primary">knowledge</span>,
+            <p className="eyebrow">Home</p>
+            <h1 className="heading-xl mt-5 text-navy welcome-up">
+              Welcome to
               <br />
-              raised in faith.
+              <span className="italic text-primary">Darul-ilm Chatham</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-              A weekday and weekend madrasah serving the children of Medway — teaching
-              Qur'an, Islamic studies and Arabic with warmth, discipline and care, taught by
-              qualified scholars.
+              A weekday and weekend madrasah serving the children of Medway — teaching Qur'an,
+              Islamic studies and Arabic with warmth, discipline and care, taught by qualified
+              scholars.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/classes" className="btn-pill">
+              <a href="/classes#apply" className="btn-pill">
                 Apply for a Place
-              </Link>
+              </a>
               <Link to="/about" className="btn-pill-ghost">
                 Our Story
               </Link>
@@ -78,8 +78,8 @@ function Home() {
       <section className="band-navy">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-2 px-6 py-5 text-center text-sm text-navy-foreground/85">
           <p>
-            <span className="font-semibold text-accent">Places are limited</span> in most of
-            our current classes —{" "}
+            <span className="font-semibold text-accent">Places are limited</span> in most of our
+            current classes —{" "}
             <Link to="/classes" className="underline hover:text-accent">
               join our waiting list
             </Link>
@@ -99,10 +99,10 @@ function Home() {
       <section className="mx-auto max-w-6xl px-6 pt-16">
         <h2 className="heading-lg rule-accent text-navy">Who we are</h2>
         <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
-          An established Islamic educational institute keen to deliver a high standard of
-          Islamic education to the entire Medway community, creating a community founded upon
-          Islamic knowledge and values. We began with only five children in January 2017 and,
-          by the grace of Almighty Allah, now serve well over a hundred students.
+          An established Islamic educational institute keen to deliver a high standard of Islamic
+          education to the entire Medway community, creating a community founded upon Islamic
+          knowledge and values. We began with only five children in January 2017 and, by the grace
+          of Almighty Allah, now serve well over a hundred students.
         </p>
       </section>
 
@@ -154,16 +154,27 @@ function Home() {
           <div>
             <h2 className="heading-lg rule-accent text-primary">Our roadmap</h2>
             <p className="mt-3 text-muted-foreground">
-              Darul-ilm Chatham began with only five children in January 2017 in our home on
-              Pagitt Street, Chatham. By February 2020 we had grown to more than a hundred
-              children, which led us to move to a larger property to accommodate our
-              students.
+              Darul-ilm Chatham began with only five children in January 2017 in our home on Pagitt
+              Street, Chatham. By February 2020 we had grown to more than a hundred children, which
+              led us to move to a larger property to accommodate our students.
             </p>
             <p className="mt-4 text-muted-foreground">
-              In May 2022 we relocated our educational facilities to the Chatham Hill Masjid,
-              where we continue to develop our facilities and serve the Medway community.
+              In May 2022 we relocated our educational facilities to the Chatham Hill Masjid, where
+              we continue to develop our facilities and serve the Medway community.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-6 py-20 text-center">
+        <h2 className="heading-lg text-primary">Ready to join us?</h2>
+        <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+          Apply for a place for your child or join our waiting list for the next available term.
+        </p>
+        <div className="mt-8 flex justify-center">
+          <Link to="/classes" className="btn-pill">
+            Apply for a Place
+          </Link>
         </div>
       </section>
 

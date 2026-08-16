@@ -13,6 +13,8 @@ const navPrimary = [
 const navSecondary = [
   { to: "/team", label: "Our Teachers" },
   { to: "/gillingham", label: "Gillingham" },
+  // { to: "/testimonials", label: "Testimonials" },
+  // { to: "/impact", label: "Impact" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -33,24 +35,24 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 border-b border-border bg-background">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
+      <header className=" top-0 z-40 border-b border-border bg-background">
+        <div className="mx-auto flex max-w-6xl items-center justify-center gap-6 px-6 py-4">
           <Link to="/" className="flex items-center gap-3">
             <img
               src={logo}
               alt="Darul-ilm Chatham logo"
               width={800}
               height={533}
-              className="h-10 w-auto sm:h-11"
+              className="h-40 w-auto sm:h-40 welcome-animation"
             />
-            <span className="leading-tight">
+            {/* <span className="leading-tight">
               <span className="block font-display text-base font-bold text-navy sm:text-xl">
                 Darul-ilm Chatham
               </span>
-              {/* <span className="block font-display text-xs italic text-muted-foreground sm:text-sm">
+              <span className="block font-display text-xs italic text-muted-foreground sm:text-sm">
                 House of Knowledge
-              </span> */}
-            </span>
+              </span>
+            </span> */}
           </Link>
 
           <button
@@ -58,7 +60,7 @@ export function SiteHeader() {
             onClick={() => setOpen(true)}
             aria-expanded={open}
             aria-label="Open menu"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full border border-border px-3 py-2 text-sm font-semibold uppercase tracking-wide text-navy sm:px-4"
+            className="fixed right-5 inline-flex shrink-0 items-center gap-2 rounded-full border border-border px-3 py-2 text-sm font-semibold uppercase tracking-wide text-navy sm:px-4"
           >
             <Menu className="h-5 w-5" />
             <span className="hidden sm:inline">Menu</span>
@@ -102,13 +104,13 @@ export function SiteHeader() {
               ))}
             </div>
 
-            <Link
-              to="/classes"
+            <a
+              href="/classes#apply"
               onClick={() => setOpen(false)}
               className="btn-pill mt-10 w-full text-center sm:mt-auto"
             >
               Apply for a Place
-            </Link>
+            </a>
           </nav>
         </div>
       )}
