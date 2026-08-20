@@ -12,10 +12,10 @@ const navPrimary = [
 
 const navSecondary = [
   { to: "/team", label: "Our Teachers" },
-  { to: "/gillingham", label: "Gillingham" },
+  // { to: "/gillingham", label: "Gillingham" },
   // { to: "/testimonials", label: "Testimonials" },
   // { to: "/impact", label: "Impact" },
-  { to: "/contact", label: "Contact" },
+  // { to: "/contact", label: "Contact" },
 ] as const;
 
 export function SiteHeader() {
@@ -76,7 +76,7 @@ export function SiteHeader() {
             onClick={() => setOpen(false)}
             className="absolute inset-0 bg-navy/50"
           />
-          <nav className="absolute inset-y-0 right-0 flex h-full w-full max-w-md flex-col overflow-y-auto bg-accent px-6 py-6 text-navy shadow-2xl sm:px-8">
+          <nav className="absolute inset-y-0 right-0 flex h-full w-full max-w-md flex-col overflow-y-auto bg-sky-soft px-6 py-6 text-navy shadow-2xl sm:px-8">
             <button
               type="button"
               onClick={() => setOpen(false)}
@@ -100,6 +100,25 @@ export function SiteHeader() {
                       </Link>
                     </li>
                   ))}
+                  <li key="/donate">
+                    <a
+                      href="https://www.zeffy.com/en-GB/ticketing/darul-ilm-kent-2026-pillars"
+                      target="_blank"
+                      onClick={() => setOpen(false)}
+                      className="block font-display text-lg font-bold uppercase tracking-wide text-navy hover:underline"
+                    >
+                      Donate
+                    </a>
+                  </li>
+                  <li key="/contact">
+                    <Link
+                      to="/contact"
+                      onClick={() => setOpen(false)}
+                      className="block font-display text-lg font-bold uppercase tracking-wide text-navy hover:underline"
+                    >
+                      Contact
+                    </Link>
+                  </li>
                 </ul>
               ))}
             </div>

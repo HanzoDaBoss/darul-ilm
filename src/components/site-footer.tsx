@@ -24,14 +24,14 @@ export function SiteFooter() {
             </span>
             <span className="leading-tight">
               <span className="block font-display text-md font-bold text-navy-foreground">
-                Darul-ilm Chatham
+                Darul-ilm Kent
               </span>
               <span className="block font-display text-sm italic text-accent">
                 House of Knowledge
               </span>
             </span>
           </div>
-          <p className="mt-5 max-w-sm text-sm leading-relaxed text-navy-foreground/80">
+          <p className="mt-5 max-w-sm text-sm leading-relaxed text-navy-foreground/80 text-justify">
             An established Islamic educational institute that is keen to deliver a high standard of
             Islamic education to the entire Medway community and create a society founded upon
             Islamic knowledge and values.
@@ -57,24 +57,29 @@ export function SiteFooter() {
             </li>
             <li>
               <Link className="hover:text-accent" to="/gillingham">
-                Gillingham (KMWA) branch
+                Gillingham — KMWA Mosque
               </Link>
+            </li>
+            <li>
+              <a className="hover:text-accent" href="/policies">
+                Our Policies
+              </a>
             </li>
           </ul>
         </div>
 
         <div>
-          <h3 className="font-display text-xl uppercase tracking-wide">Branches</h3>
+          <h3 className="font-display text-xl uppercase tracking-wide">Our Sites</h3>
           <ul className="mt-3 space-y-2 text-sm text-navy-foreground/85">
             <li>
-              Chatham Hill Masjid
+              Chatham Hill Mosque
               <br />
               22A Chatham Hill, Chatham
               <br />
               ME5 7AA
             </li>
             <li className="mt-6">
-              Gillingham KMWA
+              Gillingham — KMWA Mosque
               <br />
               114 Canterbury St, Gillingham
               <br />
@@ -113,11 +118,21 @@ export function SiteFooter() {
                 YouTube channel
               </a>
             </li>
+            <li>
+              <a
+                className="hover:text-accent"
+                href="https://www.instagram.com/darulilmchatham?igsh=YmprMzRvZm1yM3pn"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Instagram
+              </a>
+            </li>
           </ul>
         </div>
       </div>
       <div className="relative border-t border-navy-foreground/15 py-5 text-center text-xs text-navy-foreground/70">
-        Darul-ilm Chatham, based at Chatham Hill Masjid, Medway.
+        Darul-ilm Kent, based at Chatham Hill Masjid, Medway.
       </div>
     </footer>
   );
