@@ -3,6 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import quranClass from "@/assets/happy-kids.jpg";
+import whatsAppBtn from "@/assets/ChatOnWhatsAppButton/WhatsAppButtonGreenSmall.png";
 import classroom from "@/assets/darul-ilm-stock-photo-1.png";
 
 export const Route = createFileRoute("/")({
@@ -36,10 +37,7 @@ function Home() {
         target="_blank"
       >
         {" "}
-        <img
-          alt="Chat on WhatsApp"
-          src="src/assets/ChatOnWhatsAppButton/WhatsAppButtonGreenSmall.png"
-        />
+        <img alt="Chat on WhatsApp" src={whatsAppBtn} />
       </a>
 
       <section className="band-hero">
