@@ -61,7 +61,7 @@ function Contact() {
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
-                  <h3 className="font-display font-bold text-primary">Main Campus</h3>
+                  <h3 className="font-display font-bold text-primary">Main Branch</h3>
                   <p className="text-muted-foreground">
                     Chatham Hill Masjid
                     <br />
@@ -77,7 +77,7 @@ function Contact() {
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
-                  <h3 className="font-display font-bold text-primary">Second Campus</h3>
+                  <h3 className="font-display font-bold text-primary">Gillingham Branch</h3>
                   <p className="text-muted-foreground">
                     Gillingham KMWA
                     <br />

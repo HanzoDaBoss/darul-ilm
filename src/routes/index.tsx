@@ -29,6 +29,18 @@ function Home() {
   return (
     <div className="min-h-screen">
       <SiteHeader />
+      <a
+        className="fixed right-5 bottom-5 max-w-40 md:max-w-50 z-50"
+        aria-label="Chat on WhatsApp"
+        href="https://wa.me/447778020745"
+        target="_blank"
+      >
+        {" "}
+        <img
+          alt="Chat on WhatsApp"
+          src="src/assets/ChatOnWhatsAppButton/WhatsAppButtonGreenSmall.png"
+        />
+      </a>
 
       <section className="band-hero">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-5 md:grid-cols-[1.05fr_0.95fr] md:py-28">
@@ -46,8 +58,13 @@ function Home() {
             <h1 className="heading-xl mt-5 text-navy welcome-up">
               Welcome to
               <br />
-              <span className="italic text-primary">Darul-ilm Kent</span>
+              <span className="text-primary">Darul-ilm Kent</span>
             </h1>
+            <h2 className="text-lg mt-5 text-navy welcome-up leading-6">
+              Raising the Next Generation by
+              <br className="md:hidden my-0" />
+              <span className="italic text-primary"> Nurturing Hearts and Minds.</span>
+            </h2>
             <p className="mt-6 max-w-xl text-lg text-muted-foreground text-justify">
               A weekday and weekend madrasah serving the children of Medway — where children come to
               know their Dīn, love Allah and His Messenger ﷺ, and carry taqwā into how they live,
@@ -202,9 +219,12 @@ function Home() {
       <section className="mx-auto max-w-4xl px-6 py-20 text-center">
         <h2 className="heading-lg text-primary">Become a Pillar of the Madrasa</h2>
         <p className="mx-auto mt-4 max-w-xl text-muted-foreground text-justify">
-          Your support helps us raise a generation who don't just memorise their Dīn, but come to
-          love it. Every contribution goes directly toward teachers, resources, and the children we
-          serve across Medway.
+          Not every one of us can stand in front of a classroom and teach — but every one of us can
+          be part of raising a generation grounded in their Islamic identity, who love Allah and His
+          Messenger ﷺ, and who are ready to become the leaders of tomorrow. When you donate, you
+          become part of that movement — reviving Islam in our community, one child at a time. Your
+          donation goes directly toward teachers’ wages, learning resources, and running two sites
+          across Medway.
         </p>
         <div className="mt-8 flex justify-center gap-3">
           <a

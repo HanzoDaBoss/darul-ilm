@@ -6,13 +6,13 @@ import logo from "@/assets/darul-ilm-logo.png";
 
 const navPrimary = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "Our Story" },
+  { to: "/about", label: "About Us" },
   { to: "/classes", label: "Classes & Fees" },
 ] as const;
 
 const navSecondary = [
   { to: "/team", label: "Our Teachers" },
-  // { to: "/gillingham", label: "Gillingham" },
+  { to: "/gillingham", label: "Gillingham" },
   // { to: "/testimonials", label: "Testimonials" },
   // { to: "/impact", label: "Impact" },
   // { to: "/contact", label: "Contact" },
@@ -60,7 +60,7 @@ export function SiteHeader() {
             onClick={() => setOpen(true)}
             aria-expanded={open}
             aria-label="Open menu"
-            className="fixed right-5 inline-flex shrink-0 items-center gap-2 rounded-full border border-border px-3 py-2 text-sm font-semibold uppercase tracking-wide text-navy sm:px-4"
+            className="fixed right-5 z-50 inline-flex shrink-0 items-center gap-2 rounded-full border border-border px-3 py-2 text-sm font-semibold uppercase tracking-wide text-navy sm:px-4"
           >
             <Menu className="h-5 w-5" />
             <span className="hidden sm:inline">Menu</span>
@@ -100,27 +100,29 @@ export function SiteHeader() {
                       </Link>
                     </li>
                   ))}
-                  <li key="/donate">
-                    <a
-                      href="https://www.zeffy.com/en-GB/ticketing/darul-ilm-kent-2026-pillars"
-                      target="_blank"
-                      onClick={() => setOpen(false)}
-                      className="block font-display text-lg font-bold uppercase tracking-wide text-navy hover:underline"
-                    >
-                      Donate
-                    </a>
-                  </li>
-                  <li key="/contact">
-                    <Link
-                      to="/contact"
-                      onClick={() => setOpen(false)}
-                      className="block font-display text-lg font-bold uppercase tracking-wide text-navy hover:underline"
-                    >
-                      Contact
-                    </Link>
-                  </li>
                 </ul>
               ))}
+              <ul className="space-y-4">
+                <li key="/donate">
+                  <a
+                    href="https://www.zeffy.com/en-GB/ticketing/darul-ilm-kent-2026-pillars"
+                    target="_blank"
+                    onClick={() => setOpen(false)}
+                    className="block font-display text-lg font-bold uppercase tracking-wide text-navy hover:underline"
+                  >
+                    Donate
+                  </a>
+                </li>
+                <li key="/contact">
+                  <Link
+                    to="/contact"
+                    onClick={() => setOpen(false)}
+                    className="block font-display text-lg font-bold uppercase tracking-wide text-navy hover:underline"
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
             </div>
 
             <a

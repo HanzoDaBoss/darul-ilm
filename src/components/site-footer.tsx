@@ -7,11 +7,6 @@ export function SiteFooter() {
     <footer className="relative band-navy">
       <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-4">
         <div>
-          {/* <h2 className="heading-lg text-accent">Darul-ilm Chatham</h2>
-          <p className="mt-3 max-w-sm text-sm text-navy-foreground/80">
-            An established Islamic educational institute serving the Medway community with a high
-            standard of Islamic education.
-          </p> */}
           <div className="flex items-start gap-3">
             <span className="inline-flex items-center justify-center rounded-md bg-background p-1.5">
               <img

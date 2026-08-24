@@ -26,29 +26,24 @@ export const Route = createFileRoute("/team")({
 
 const teachers = [
   {
-    name: "Mufti Didar Hasan",
-    role: "Imam & Head of Education",
+    name: "Mufti Didar Hasan (Co-Founder)",
+    role: "Head of Education",
     bio: "Graduated in 2015 from the 6-year 'Alimiyyah course at Jamiatul Ilm wal Huda, Blackburn, in the Islamic sciences, and then completed the two-year iftaa (mufti) course in 2019 at WhiteThread Institute, London. He went on to complete his MA in Islamic Studies at SOAS University, London. Since 2017 he has been focusing on further studies and establishing a high standard of Islamic education in Medway. He is currently the Imam and Khateeb of Chatham Hill Mosque and Head of Education at Darul-ilm Chatham.",
   },
   {
-    name: "Mufti Mehdi Hasan",
-    role: "Teacher",
-    bio: "Graduated in 2017 from the 6-year 'Alimiyyah course at Jamiatul Ilm wal Huda, Blackburn, and then studied for one year in South Africa, focusing on specialisation in hadith studies. He completed the two-year iftaa (mufti) course in 2021 at WhiteThread Institute. Since 2019 he has been focusing on further studies and imparting Islamic education in Medway.",
-  },
-  {
-    name: "Alimah Zulfa Tanzim",
-    role: "Teacher & Administration",
+    name: "Alimah Zulfa Tanzim (Co-Founder)",
+    role: "Senior Teacher & Manager",
     bio: "Graduated in 2013 from the 6-year 'Alimiyyah course at Hidayatul Banat, Blackburn. Currently she is focused on studying the Arabic language and the Islamic sciences whilst also imparting education to the community and running Darul-ilm Chatham. She is also one of the co-founders of our mother and child education group, Nurturing Roots.",
   },
   {
-    name: "Mawlana Nasir Ahmed",
-    role: "Teacher",
-    bio: "Graduated in 2018 from the 6-year 'Alimiyyah course at Jamiatul Ilm wal Huda, Blackburn. He then went to Turkey for one year to further his pursuit of Islamic knowledge. Since his return he has been focused on the children's education at Darul-ilm Chatham.",
+    name: "Mufti Mehdi Hasan",
+    role: "Assistant Head Teacher",
+    bio: "Graduated in 2017 from the 6-year 'Alimiyyah course at Jamiatul Ilm wal Huda, Blackburn, and then studied for one year in South Africa, focusing on specialisation in hadith studies. He completed the two-year iftaa (mufti) course in 2021 at WhiteThread Institute. Since 2019 he has been focusing on further studies and imparting Islamic education in Medway.",
   },
   {
-    name: "Alimah Nadia Akhtar",
-    role: "Teacher",
-    bio: "A qualified 'Alimah teaching on our children's programme at Darul-ilm Chatham.",
+    name: "Mawlana Nasir Ahmed",
+    role: "Senior Teacher",
+    bio: "Graduated in 2018 from the 6-year 'Alimiyyah course at Jamiatul Ilm wal Huda, Blackburn. He then went to Turkey for one year to further his pursuit of Islamic knowledge. Since his return he has been focused on the children's education at Darul-ilm Chatham.",
   },
 ];
 

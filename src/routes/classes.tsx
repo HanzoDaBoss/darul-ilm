@@ -111,7 +111,7 @@ function Classes() {
         <div className=" text-center">
           <span className="eyebrow">Apply today</span>
           <h2 className="heading-lg mt-4 text-primary">
-            Register a place or join the waiting list
+            Register a place to join the waiting list
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
             Fill in the form below and a member of the Darul-ilm team will be in touch. Since most
