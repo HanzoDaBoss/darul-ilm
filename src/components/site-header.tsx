@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import logo from "@/assets/darul-ilm-logo.png";
+import whatsAppBtn from "@/assets/ChatOnWhatsAppButton/WhatsAppButtonGreenSmall.png";
 
 const navPrimary = [
   { to: "/", label: "Home" },
@@ -67,6 +68,16 @@ export function SiteHeader() {
           </button>
         </div>
       </header>
+
+      <a
+        className="fixed right-5 bottom-5 max-w-40 md:max-w-50 z-50"
+        aria-label="Chat on WhatsApp"
+        href="https://wa.me/447778020745"
+        target="_blank"
+      >
+        {" "}
+        <img alt="Chat on WhatsApp" src={whatsAppBtn} />
+      </a>
 
       {open && (
         <div className="fixed inset-0 z-50">

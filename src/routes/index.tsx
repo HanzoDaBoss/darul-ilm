@@ -30,15 +30,6 @@ function Home() {
   return (
     <div className="min-h-screen">
       <SiteHeader />
-      <a
-        className="fixed right-5 bottom-5 max-w-40 md:max-w-50 z-50"
-        aria-label="Chat on WhatsApp"
-        href="https://wa.me/447778020745"
-        target="_blank"
-      >
-        {" "}
-        <img alt="Chat on WhatsApp" src={whatsAppBtn} />
-      </a>
 
       <section className="band-hero">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-5 md:grid-cols-[1.05fr_0.95fr] md:py-28">
