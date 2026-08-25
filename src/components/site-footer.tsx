@@ -41,7 +41,7 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
-              <Link className="hover:text-accent" to="/classes">
+              <Link className="hover:text-accent" to="/chatham">
                 Class information & application
               </Link>
             </li>
@@ -127,7 +127,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="relative border-t border-navy-foreground/15 py-5 text-center text-xs text-navy-foreground/70">
-        Darul-ilm Kent, based at Chatham Hill Masjid, Medway.
+        © 2026 Darul-ilm Chatham. All rights reserved.
       </div>
     </footer>
   );

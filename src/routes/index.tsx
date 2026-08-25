@@ -3,7 +3,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import quranClass from "@/assets/happy-kids.jpg";
-import whatsAppBtn from "@/assets/ChatOnWhatsAppButton/WhatsAppButtonGreenSmall.png";
 import classroom from "@/assets/darul-ilm-stock-photo-1.png";
 
 export const Route = createFileRoute("/")({
@@ -31,37 +30,68 @@ function Home() {
     <div className="min-h-screen">
       <SiteHeader />
 
-      <section className="band-hero">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-5 md:grid-cols-[1.05fr_0.95fr] md:py-28">
-          <div>
-            <div className="flex flex-row justify-between">
-              <p className="eyebrow">Home</p>
-              <a
-                href="https://www.zeffy.com/en-GB/ticketing/darul-ilm-kent-2026-pillars"
-                target="_blank"
-                className="btn-pill text-xs p-3"
-              >
-                Donate
-              </a>
+      <section className="relative overflow-hidden band-hero">
+        <div className="mx-auto grid max-w-7xl items-stretch md:grid-cols-[0.9fr_1.1fr]">
+          {/* Image panel — full width on mobile (top), right column diagonal on desktop */}
+          <div className="relative order-1 h-[340px] sm:h-[420px] md:order-2 md:h-[650px]">
+            {/* accent stripe — only on the diagonal desktop cut */}
+            <div
+              className="absolute inset-0 z-0 hidden bg-accent md:block"
+              style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 6% 100%)" }}
+            />
+            <img
+              src={quranClass}
+              alt="Students engaged in a Darul-ilm Kent classroom"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+
+          {/* Text panel — navy band under image on mobile, diagonal-cut left column on desktop */}
+          <div
+            className="relative z-10 order-2 flex flex-col justify-center bg-band px-6 py-10 sm:px-8 md:order-1 md:bg-transparent md:py-0 md:pr-16"
+            style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
+          >
+            <div
+              className="hidden md:block"
+              style={{ clipPath: "polygon(0 0, 100% 0, 88% 100%, 0 100%)" }}
+            >
+              <div className="flex flex-row justify-between pt-5">
+                <p className="eyebrow">Home</p>
+                {/* <a
+                  href="https://www.zeffy.com/en-GB/ticketing/darul-ilm-kent-2026-pillars"
+                  target="_blank"
+                  className="btn-pill text-xs p-3"
+                >
+                  Donate
+                </a> */}
+              </div>
             </div>
-            <h1 className="heading-xl mt-5 text-navy welcome-up">
+
+            <h1 className="heading-xl font-display uppercase leading-[0.95] md:mt-5 text-navy">
               Welcome to
               <br />
               <span className="text-primary">Darul-ilm Kent</span>
             </h1>
+
             <h2 className="text-lg mt-5 text-navy welcome-up leading-6">
               Raising the Next Generation by
-              <br className="md:hidden my-0" />
+              <br className="my-0" />
               <span className="italic text-primary"> Nurturing Hearts and Minds.</span>
             </h2>
-            <p className="mt-6 max-w-xl text-lg text-muted-foreground text-justify">
+
+            <p className="mt-4 text-sm md:mt-6 md:text-base text-muted-foreground text-justify">
               A weekday and weekend madrasah serving the children of Medway — where children come to
               know their Dīn, love Allah and His Messenger ﷺ, and carry taqwā into how they live,
               taught with excellence by qualified scholars.
             </p>
-            <div className="mt-8 flex flex-col gap-3 justify-center">
+            {/* <p className="mt-4 max-w-md text-sm text-white/70 md:mt-6 md:text-base md:text-muted-foreground">
+              A weekday and weekend madrasah serving the children of Medway — taught with excellence
+              by qualified scholars.
+            </p> */}
+
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row md:mt-8 justify-center">
               <a
-                href=" https://registrations.ibeuk.org/darulilm"
+                href="https://registrations.ibeuk.org/darulilm"
                 target="_blank"
                 className="btn-pill text-md"
               >
@@ -75,7 +105,16 @@ function Home() {
                 Apply at Gillingham
               </a>
             </div>
-            <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6">
+
+            {/* Mobile-only donate link, since the top-right one is hidden below md */}
+            {/* <a
+              href="https://www.zeffy.com/en-GB/ticketing/darul-ilm-kent-2026-pillars"
+              target="_blank"
+              className="mt-4 text-sm font-semibold text-accent underline md:hidden"
+            >
+              Donate now
+            </a> */}
+            <dl className="my-12 grid grid-cols-3 gap-6">
               {[
                 { k: "2017", v: "Founded with 5 students" },
                 { k: "2", v: "Branches across Medway" },
@@ -90,23 +129,30 @@ function Home() {
               ))}
             </dl>
           </div>
-          <img
-            src={quranClass}
-            alt="An open Qur'an on a wooden stand in a bright classroom"
-            width={1024}
-            height={1280}
-            className="w-full rounded-3xl object-cover panel-card"
-          />
         </div>
+
+        {/* prev/next arrows */}
+        {/* <button
+          aria-label="Previous"
+          className="absolute left-4 bottom-6 z-20 grid h-9 w-9 place-items-center rounded-sm bg-accent text-white"
+        >
+          ←
+        </button>
+        <button
+          aria-label="Next"
+          className="absolute right-4 bottom-6 z-20 grid h-9 w-9 place-items-center rounded-sm bg-accent text-white"
+        >
+          →
+        </button> */}
       </section>
 
       <section className="band-navy">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-2 px-6 py-5 text-center text-sm text-navy-foreground/85">
           <p>
             <span className="font-semibold text-accent">Places are limited</span> in most of our
-            current classes — <p className="">Apply above to join our waiting list</p>.
+            current classes — <p className="">Apply above to join our waiting list</p>
           </p>
-          <span className="hidden text-navy-foreground/30 sm:inline">|</span>
+          {/* <span className="hidden text-navy-foreground/30 sm:inline">|</span> */}
           {/* <p>
             New branch now open at{" "}
             <Link to="/gillingham" className="underline hover:text-accent">

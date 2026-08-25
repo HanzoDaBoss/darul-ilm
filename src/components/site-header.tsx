@@ -8,15 +8,17 @@ import whatsAppBtn from "@/assets/ChatOnWhatsAppButton/WhatsAppButtonGreenSmall.
 const navPrimary = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
-  { to: "/classes", label: "Classes & Fees" },
+  { to: "/chatham", label: "Chatham School" },
+  { to: "/gillingham", label: "Gillingham School" },
 ] as const;
 
 const navSecondary = [
   { to: "/team", label: "Our Teachers" },
-  { to: "/gillingham", label: "Gillingham" },
+  // { to: "/gillingham", label: "Gillingham School" },
   // { to: "/testimonials", label: "Testimonials" },
   // { to: "/impact", label: "Impact" },
-  // { to: "/contact", label: "Contact" },
+  { to: "https://www.zeffy.com/en-GB/ticketing/darul-ilm-kent-2026-pillars", label: "Donate" },
+  { to: "/contact", label: "Contact" },
 ] as const;
 
 export function SiteHeader() {
@@ -102,47 +104,43 @@ export function SiteHeader() {
                 <ul key={i} className="space-y-4">
                   {group.map((item) => (
                     <li key={item.to}>
-                      <Link
-                        to={item.to}
+                      <a
+                        href={item.to}
                         onClick={() => setOpen(false)}
                         className="block font-display text-lg font-bold uppercase tracking-wide text-navy hover:underline"
+                        target={item.label === "Donate" ? "_blank" : ""}
                       >
                         {item.label}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
               ))}
-              <ul className="space-y-4">
-                <li key="/donate">
-                  <a
-                    href="https://www.zeffy.com/en-GB/ticketing/darul-ilm-kent-2026-pillars"
-                    target="_blank"
-                    onClick={() => setOpen(false)}
-                    className="block font-display text-lg font-bold uppercase tracking-wide text-navy hover:underline"
-                  >
-                    Donate
-                  </a>
-                </li>
-                <li key="/contact">
-                  <Link
-                    to="/contact"
-                    onClick={() => setOpen(false)}
-                    className="block font-display text-lg font-bold uppercase tracking-wide text-navy hover:underline"
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
             </div>
 
-            <a
+            <div className="flex flex-col gap-1 sm:gap-3 mt-auto">
+              <a
+                href="https://registrations.ibeuk.org/darulilm"
+                target="_blank"
+                className="btn-pill mt-10 w-full text-center sm:mt-autotext-md"
+              >
+                Apply at Chatham
+              </a>
+              <a
+                href="https://registrations.ibeuk.org/DarulilmKMWA"
+                target="_blank"
+                className="btn-pill-ghost mt-5 w-full text-center sm:mt-auto"
+              >
+                Apply at Gillingham
+              </a>
+            </div>
+            {/* <a
               href="/classes#apply"
               onClick={() => setOpen(false)}
               className="btn-pill mt-10 w-full text-center sm:mt-auto"
             >
               Apply for a Place
-            </a>
+            </a> */}
           </nav>
         </div>
       )}

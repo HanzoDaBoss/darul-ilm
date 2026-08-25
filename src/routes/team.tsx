@@ -58,7 +58,8 @@ function Team() {
       />
 
       <section className="mx-auto max-w-5xl px-6 py-16">
-        <h2 className="heading-lg rule-accent text-primary">Meet our teachers</h2>
+        <h2 className="heading-lg rule-accent text-primary">Meet Our Senior Teachers</h2>
+
         <div className="mt-8 space-y-6">
           {teachers.map((teacher) => (
             <article key={teacher.name} className="panel-card p-6 md:p-8">
@@ -66,10 +67,17 @@ function Team() {
               <p className="mt-1 font-display text-base uppercase tracking-[0.2em] text-accent">
                 {teacher.role}
               </p>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{teacher.bio}</p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground text-justify">
+                {teacher.bio}
+              </p>
             </article>
           ))}
         </div>
+        <p className="mt-12 text-base text-muted-foreground text-justify">
+          Alongside our senior teachers, Darul-Ilm Kent is supported by a dedicated team of male and
+          female teachers across both our Chatham and Gillingham sites — each committed to the same
+          standard of excellence and care in guiding our students. We’re proud of every one of them.
+        </p>
       </section>
 
       <SiteFooter />

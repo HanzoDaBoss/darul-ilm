@@ -5,10 +5,10 @@ import { SiteFooter } from "@/components/site-footer";
 import { PageBanner } from "@/components/page-banner";
 import { ApplicationForm } from "@/components/application-form";
 
-export const Route = createFileRoute("/classes")({
+export const Route = createFileRoute("/chatham")({
   head: () => ({
     meta: [
-      { title: "Class Information & Application | Darul-ilm Chatham" },
+      { title: "Chatham School | Darul-ilm Chatham" },
       {
         name: "description",
         content:
@@ -56,7 +56,7 @@ function Classes() {
     <div className="min-h-screen">
       <SiteHeader />
       <PageBanner
-        title="Class Information & Application"
+        title="Chatham School"
         eyebrow="Info"
         subtitle="Children's madrasah classes at Chatham Hill Masjid."
       />
@@ -111,7 +111,7 @@ function Classes() {
         <div className=" text-center">
           <span className="eyebrow">Apply today</span>
           <h2 className="heading-lg mt-4 text-primary">
-            Register a place to join the waiting list
+            Register a place to join the Chatham waiting list
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
             Fill in the form below and a member of the Darul-ilm team will be in touch. Since most

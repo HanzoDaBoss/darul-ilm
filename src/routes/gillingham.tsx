@@ -3,6 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageBanner } from "@/components/page-banner";
+import { ApplicationForm } from "@/components/application-form";
 
 export const Route = createFileRoute("/gillingham")({
   head: () => ({
@@ -32,7 +33,7 @@ function Gillingham() {
     <div className="min-h-screen">
       <SiteHeader />
       <PageBanner
-        title="Gillingham KMWA Branch "
+        title="Gillingham KMWA School"
         eyebrow="New branch"
         subtitle="A place where young hearts connect with the Qur'an and Deen."
       />
@@ -58,15 +59,15 @@ function Gillingham() {
           ))}
         </ul>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          <article className="panel-card p-6">
+        <div className="mt-12 flex justify-center">
+          <article className="panel-card p-6 w-full">
             <h3 className="font-display text-xl uppercase text-primary">Weekend classes</h3>
             <p className="mt-2 text-sm">Saturday & Sunday: 9:45am – 1:00pm</p>
           </article>
-          <article className="panel-card p-6">
+          {/* <article className="panel-card p-6">
             <h3 className="font-display text-xl uppercase text-primary">Weekday classes</h3>
             <p className="mt-2 text-sm">Monday – Thursday: 6:30pm – 7:30pm</p>
-          </article>
+          </article> */}
         </div>
 
         <h2 className="heading-lg rule-accent mt-14 text-primary">Fees</h2>
@@ -87,7 +88,7 @@ function Gillingham() {
         <h2 className="heading-lg rule-accent mt-14 text-primary">Location</h2>
         <p className="mt-3 text-muted-foreground">KMWA, 114 Canterbury St, Gillingham ME7 5UH</p>
 
-        <h2 className="heading-lg rule-accent mt-14 text-primary">Enquiries & enrolment</h2>
+        {/* <h2 className="heading-lg rule-accent mt-14 text-primary">Enquiries & enrolment</h2>
         <ul className="mt-3 space-y-2 text-muted-foreground">
           <li>
             Message / Call / WhatsApp: Imam Didar{" "}
@@ -131,7 +132,22 @@ function Gillingham() {
         <p className="mt-4 text-sm text-muted-foreground">
           Male and female teachers needed! If you are interested in applying, please register your
           interest using the link above.
-        </p>
+        </p> */}
+      </section>
+
+      <section className="bg-sand mx-auto  px-6 py-14" id="apply">
+        <div className=" text-center">
+          <span className="eyebrow">Apply today</span>
+          <h2 className="heading-lg mt-4 text-primary">
+            Register a place to join the Gillingham waiting list
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+            Fill in the form below and a member of the Darul-ilm team will be in touch. Since most
+            classes are currently full, most applications will join our waiting list.
+          </p>
+        </div>
+
+        <ApplicationForm />
       </section>
 
       <SiteFooter />
