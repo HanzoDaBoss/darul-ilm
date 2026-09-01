@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageBanner } from "@/components/page-banner";
-import { ApplicationForm } from "@/components/application-form";
+import { ChathamRegistrationForm } from "@/components/chatham-registration-form";
 
 export const Route = createFileRoute("/chatham")({
   head: () => ({
@@ -119,7 +119,7 @@ function Classes() {
           </p>
         </div>
 
-        <ApplicationForm />
+        <ChathamRegistrationForm />
       </section>
 
       <SiteFooter />
