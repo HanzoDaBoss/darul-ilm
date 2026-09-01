@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageBanner } from "@/components/page-banner";
 import MapComponent from "@/components/map";
+import quranClass from "@/assets/darul-ilm-stock-photo-1.png";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -45,11 +46,105 @@ function Contact() {
   return (
     <div className="min-h-screen">
       <SiteHeader />
-      <PageBanner
-        title="Contact Us"
-        eyebrow="Get in touch"
-        subtitle="We would love to hear from parents, students and volunteers."
-      />
+      {/* Contact hero */}
+      <section className="relative isolate h-[400px] overflow-hidden sm:h-[450px] md:h-[480px]">
+        {/* Background image */}
+        <img
+          src={quranClass}
+          alt="Children learning at Darul-ilm Kent"
+          className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
+        />
+
+        {/* Subtle overall darkening */}
+        <div className="absolute inset-0 -z-20 bg-black/10" />
+
+        {/* Left-side gradient for typography */}
+        <div
+          className="
+            absolute inset-0 -z-10
+            bg-gradient-to-r
+            from-black/75
+            via-black/40
+            to-transparent
+          "
+        />
+
+        {/* Bottom fade */}
+        <div
+          className="
+            absolute inset-x-0 bottom-0 -z-10 h-1/2
+            bg-gradient-to-t
+            from-black/55
+            to-transparent
+          "
+        />
+
+        {/* Hero content */}
+        <div className="mx-auto flex h-full max-w-7xl items-end px-6 pb-10 sm:px-8 sm:pb-12 md:px-12 md:pb-14 lg:px-16">
+          <div className="max-w-3xl">
+            <p
+              className="
+                mb-3
+                text-sm
+                font-semibold
+                uppercase
+                tracking-[0.2em]
+                text-primary
+                sm:text-base
+              "
+              style={{
+                textShadow: "0 2px 10px rgba(0,0,0,0.8)",
+              }}
+            >
+              Get in touch
+            </p>
+
+            <h1
+              className="
+                font-display
+                text-5xl
+                font-bold
+                uppercase
+                leading-[0.9]
+                tracking-tight
+                text-white
+                sm:text-6xl
+                md:text-7xl
+              "
+              style={{
+                textShadow: "0 4px 10px rgba(0,0,0,0.9), 0 8px 30px rgba(0,0,0,0.55)",
+              }}
+            >
+              Contact
+              <br />
+              <span className="text-primary">Us</span>
+            </h1>
+
+            <div
+              className="my-5 h-1 w-14 rounded-full bg-primary"
+              style={{
+                boxShadow: "0 2px 10px rgba(0,0,0,0.5)",
+              }}
+            />
+
+            <p
+              className="
+                max-w-2xl
+                text-base
+                leading-7
+                text-white
+                sm:text-lg
+                sm:leading-8
+              "
+              style={{
+                textShadow: "0 2px 6px rgba(0,0,0,0.9), 0 5px 18px rgba(0,0,0,0.45)",
+              }}
+            >
+              We would love to hear from parents, students and volunteers.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="mx-auto max-w-6xl px-6 py-12 md:py-16">
         <div className="grid gap-8 lg:grid-cols-2">

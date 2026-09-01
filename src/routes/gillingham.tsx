@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageBanner } from "@/components/page-banner";
 import { GillinghamRegistrationForm } from "@/components/gillingham-registration-form";
+import quranClass from "@/assets/darul-ilm-stock-photo-1.png";
 
 export const Route = createFileRoute("/gillingham")({
   head: () => ({
@@ -32,11 +33,64 @@ function Gillingham() {
   return (
     <div className="min-h-screen">
       <SiteHeader />
-      <PageBanner
-        title="Gillingham KMWA School"
-        eyebrow="New branch"
-        subtitle="A place where young hearts connect with the Qur'an and Deen."
-      />
+      <section className="relative isolate h-[400px] overflow-hidden sm:h-[450px] md:h-[480px]">
+        {/* Background image */}
+        <img
+          src={quranClass}
+          alt="Children learning at Darul-ilm Kent"
+          className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
+        />
+
+        {/* Subtle overall darkening */}
+        <div className="absolute inset-0 -z-20 bg-black/10" />
+
+        {/* Gradient behind text */}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/75 via-black/40 to-transparent" />
+
+        {/* Bottom fade */}
+        <div className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-black/55 to-transparent" />
+
+        {/* Title */}
+        <div className="mx-auto flex h-full max-w-7xl items-end px-6 pb-10 sm:px-8 sm:pb-12 md:px-12 md:pb-14 lg:px-16">
+          <div className="max-w-3xl">
+            <p
+              className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary sm:text-base"
+              style={{
+                textShadow: "0 2px 10px rgba(0,0,0,0.8)",
+              }}
+            >
+              New Branch
+            </p>
+
+            <h1
+              className="font-display text-5xl font-bold uppercase leading-[0.9] tracking-tight text-white sm:text-6xl md:text-7xl"
+              style={{
+                textShadow: "0 4px 10px rgba(0,0,0,0.9), 0 8px 30px rgba(0,0,0,0.55)",
+              }}
+            >
+              Gillingham
+              <br />
+              <span className="text-primary">KMWA School</span>
+            </h1>
+
+            <div
+              className="my-5 h-1 w-14 rounded-full bg-primary"
+              style={{
+                boxShadow: "0 2px 10px rgba(0,0,0,0.5)",
+              }}
+            />
+
+            <p
+              className="max-w-2xl text-base leading-7 text-white sm:text-lg sm:leading-8"
+              style={{
+                textShadow: "0 2px 6px rgba(0,0,0,0.9), 0 5px 18px rgba(0,0,0,0.45)",
+              }}
+            >
+              A place where young hearts connect with the Qur&apos;an and Deen.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="mx-auto max-w-4xl px-6 py-16">
         <p className="font-semibold text-primary">
@@ -87,52 +141,6 @@ function Gillingham() {
 
         <h2 className="heading-lg rule-accent mt-14 text-primary">Location</h2>
         <p className="mt-3 text-muted-foreground">KMWA, 114 Canterbury St, Gillingham ME7 5UH</p>
-
-        {/* <h2 className="heading-lg rule-accent mt-14 text-primary">Enquiries & enrolment</h2>
-        <ul className="mt-3 space-y-2 text-muted-foreground">
-          <li>
-            Message / Call / WhatsApp: Imam Didar{" "}
-            <a className="text-accent hover:underline" href="tel:07534979369">
-              07534 979369
-            </a>
-          </li>
-          <li>
-            Administrator:{" "}
-            <a className="text-accent hover:underline" href="tel:07778200746">
-              07778 200746
-            </a>
-          </li>
-          <li>
-            Email:{" "}
-            <a className="text-accent hover:underline" href="mailto:Info@darulilmchatham.com">
-              Info@darulilmchatham.com
-            </a>
-          </li>
-        </ul>
-        <p className="mt-6 font-semibold text-primary">
-          Limited spaces available — register now to secure your child's place.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <a
-            href="/classes#apply"
-            rel="noreferrer"
-            className="inline-flex items-center rounded-md bg-primary px-6 py-3 font-display text-lg uppercase tracking-wide text-primary-foreground transition-colors hover:bg-navy-deep"
-          >
-            Apply
-          </a>
-          <a
-            href="https://forms.gle/bn3QW22ws5RraHCL6"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center rounded-md border-2 border-primary px-6 py-3 font-display text-lg uppercase tracking-wide text-primary transition-colors hover:bg-secondary"
-          >
-            Teacher vacancies
-          </a>
-        </div>
-        <p className="mt-4 text-sm text-muted-foreground">
-          Male and female teachers needed! If you are interested in applying, please register your
-          interest using the link above.
-        </p> */}
       </section>
 
       <section className="bg-sand mx-auto  px-6 py-14" id="apply">

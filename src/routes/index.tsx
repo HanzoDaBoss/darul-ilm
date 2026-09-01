@@ -37,7 +37,7 @@ function Home() {
             <img
               src={quranClass}
               alt="Students engaged in a Darul-ilm Kent classroom"
-              className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
+              className="absolute inset-0 -z-30 h-full w-full object-cover object-top"
             />
 
             <div className="absolute inset-0 -z-20 bg-black/5" />
