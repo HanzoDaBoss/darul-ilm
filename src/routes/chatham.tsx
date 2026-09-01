@@ -110,9 +110,7 @@ function Classes() {
       <section className="bg-sand mx-auto  px-6 py-14" id="apply">
         <div className=" text-center">
           <span className="eyebrow">Apply today</span>
-          <h2 className="heading-lg mt-4 text-primary">
-            Register a place to join the Chatham waiting list
-          </h2>
+          <h2 className="heading-lg mt-4 text-primary">Register for the Chatham waiting list</h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
             Fill in the form below and a member of the Darul-ilm team will be in touch. Since most
             classes are currently full, most applications will join our waiting list.

@@ -83,22 +83,20 @@ function Home() {
 
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <a
-                    href="https://registrations.ibeuk.org/darulilm"
-                    target="_blank"
+                    href="/chatham#apply"
                     rel="noreferrer"
                     className="btn-pill inline-flex min-h-[50px] items-center justify-center gap-2 px-7 text-base"
                   >
-                    <MapPin className="h-5 w-5" aria-hidden />
+                    {/* <MapPin className="h-5 w-5" aria-hidden /> */}
                     Apply at Chatham
                   </a>
 
                   <a
-                    href="https://registrations.ibeuk.org/DarulilmKMWA"
-                    target="_blank"
+                    href="/gillingham#apply"
                     rel="noreferrer"
                     className="btn-pill-ghost inline-flex min-h-[50px] items-center justify-center gap-2 bg-background px-7 text-base"
                   >
-                    <MapPin className="h-5 w-5" aria-hidden />
+                    {/* <MapPin className="h-5 w-5" aria-hidden /> */}
                     Apply at Gillingham
                   </a>
                 </div>

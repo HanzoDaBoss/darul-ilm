@@ -127,7 +127,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="relative border-t border-navy-foreground/15 py-5 text-center text-xs text-navy-foreground/70">
-        © 2026 Darul-ilm Chatham. All rights reserved.
+        © 2026 Darul-ilm Kent. All rights reserved.
       </div>
     </footer>
   );

@@ -120,15 +120,13 @@ export function SiteHeader() {
 
             <div className="flex flex-col gap-1 sm:gap-3 mt-auto">
               <a
-                href="https://registrations.ibeuk.org/darulilm"
-                target="_blank"
+                href="/chatham#apply"
                 className="btn-pill mt-10 w-full text-center sm:mt-autotext-md"
               >
                 Apply at Chatham
               </a>
               <a
-                href="https://registrations.ibeuk.org/DarulilmKMWA"
-                target="_blank"
+                href="/gillingham#apply"
                 className="btn-pill-ghost mt-5 w-full text-center sm:mt-auto"
               >
                 Apply at Gillingham

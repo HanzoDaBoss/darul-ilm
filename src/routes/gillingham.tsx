@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageBanner } from "@/components/page-banner";
-import { ApplicationForm } from "@/components/application-form";
+import { GillinghamRegistrationForm } from "@/components/gillingham-registration-form";
 
 export const Route = createFileRoute("/gillingham")({
   head: () => ({
@@ -138,16 +138,14 @@ function Gillingham() {
       <section className="bg-sand mx-auto  px-6 py-14" id="apply">
         <div className=" text-center">
           <span className="eyebrow">Apply today</span>
-          <h2 className="heading-lg mt-4 text-primary">
-            Register a place to join the Gillingham waiting list
-          </h2>
+          <h2 className="heading-lg mt-4 text-primary">Register for the Gillingham waiting list</h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
             Fill in the form below and a member of the Darul-ilm team will be in touch. Since most
             classes are currently full, most applications will join our waiting list.
           </p>
         </div>
 
-        <ApplicationForm />
+        <GillinghamRegistrationForm />
       </section>
 
       <SiteFooter />
