@@ -103,9 +103,7 @@ function About() {
                 textShadow: "0 4px 10px rgba(0,0,0,0.9), 0 8px 30px rgba(0,0,0,0.55)",
               }}
             >
-              About
-              <br />
-              <span className="text-primary">Us</span>
+              About <span className="text-primary">Us</span>
             </h1>
 
             {/* Accent line */}

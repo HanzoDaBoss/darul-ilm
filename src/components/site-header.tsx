@@ -17,6 +17,7 @@ const navSecondary = [
   // { to: "/gillingham", label: "Gillingham School" },
   // { to: "/testimonials", label: "Testimonials" },
   // { to: "/impact", label: "Impact" },
+  { to: "https://courses.darulilmchatham.com/", label: "Online Courses" },
   { to: "https://www.zeffy.com/en-GB/ticketing/darul-ilm-kent-2026-pillars", label: "Donate" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -108,7 +109,7 @@ export function SiteHeader() {
                         href={item.to}
                         onClick={() => setOpen(false)}
                         className="block font-display text-lg font-bold uppercase tracking-wide text-navy hover:underline"
-                        target={item.label === "Donate" ? "_blank" : ""}
+                        target={item.label === "Donate" || "Online Courses" ? "_blank" : ""}
                       >
                         {item.label}
                       </a>

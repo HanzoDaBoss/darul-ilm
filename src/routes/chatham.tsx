@@ -92,7 +92,7 @@ function Classes() {
         {/* Hero content */}
         <div className="mx-auto flex h-full max-w-7xl items-end px-6 pb-10 sm:px-8 sm:pb-12 md:px-12 md:pb-14 lg:px-16">
           <div className="max-w-3xl">
-            <p
+            {/* <p
               className="
                 mb-3
                 text-sm
@@ -107,7 +107,7 @@ function Classes() {
               }}
             >
               Info
-            </p>
+            </p> */}
 
             <h1
               className="

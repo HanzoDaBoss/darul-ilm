@@ -53,14 +53,14 @@ function Gillingham() {
         {/* Title */}
         <div className="mx-auto flex h-full max-w-7xl items-end px-6 pb-10 sm:px-8 sm:pb-12 md:px-12 md:pb-14 lg:px-16">
           <div className="max-w-3xl">
-            <p
+            {/* <p
               className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary sm:text-base"
               style={{
                 textShadow: "0 2px 10px rgba(0,0,0,0.8)",
               }}
             >
               New Branch
-            </p>
+            </p> */}
 
             <h1
               className="font-display text-5xl font-bold uppercase leading-[0.9] tracking-tight text-white sm:text-6xl md:text-7xl"
@@ -93,10 +93,10 @@ function Gillingham() {
       </section>
 
       <section className="mx-auto max-w-4xl px-6 py-16">
-        <p className="font-semibold text-primary">
+        {/* <p className="font-semibold text-primary">
           Alhamdulillah! We're excited to announce the opening of our new Darul-ilm branch at KMWA,
           Canterbury Street, Gillingham.
-        </p>
+        </p> */}
 
         <h2 className="heading-lg rule-accent mt-10 text-primary">What we offer</h2>
         <ul className="mt-4 space-y-2 text-muted-foreground">
