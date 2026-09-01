@@ -37,7 +37,7 @@ function Home() {
             <img
               src={quranClass}
               alt="Students engaged in a Darul-ilm Kent classroom"
-              className="absolute inset-0 -z-30 h-full w-full object-cover object-top"
+              className="absolute inset-0 -z-30 h-full w-full object-cover object-[25%_5%]"
             />
 
             <div className="absolute inset-0 -z-20 bg-black/5" />
@@ -161,15 +161,32 @@ function Home() {
             <article key={card.title} className="panel-card p-6">
               <h3 className="font-display text-2xl uppercase text-primary">{card.title}</h3>
               <p className="mt-3 text-sm text-muted-foreground">{card.body}</p>
-              {card.to && (
-                <a
-                  href={card.to}
-                  className="mt-4 inline-block font-display text-base uppercase tracking-wide text-accent hover:underline"
-                  target={card.title === "16+ Programs" ? "_blank" : ""}
-                >
-                  {card.cta}
-                </a>
-              )}
+              {card.to &&
+                (card.title === "Children's Classes" ? (
+                  <>
+                    {" "}
+                    <a
+                      href="/chatham"
+                      className="mt-4 inline-block font-display text-base uppercase tracking-wide text-accent hover:underline"
+                    >
+                      CHATHAM CLASS TIMES & FEES
+                    </a>{" "}
+                    <a
+                      href="/gillingham"
+                      className="mt-2 inline-block font-display text-base uppercase tracking-wide text-accent hover:underline"
+                    >
+                      GILLINGHAM CLASS TIMES & FEES
+                    </a>
+                  </>
+                ) : (
+                  <a
+                    href={card.to}
+                    className="mt-4 inline-block font-display text-base uppercase tracking-wide text-accent hover:underline"
+                    target={card.title === "16+ Programs" ? "_blank" : ""}
+                  >
+                    {card.cta}
+                  </a>
+                ))}
             </article>
           ))}
         </div>

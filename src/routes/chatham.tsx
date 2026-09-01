@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageBanner } from "@/components/page-banner";
 import { ChathamRegistrationForm } from "@/components/chatham-registration-form";
-import quranClass from "@/assets/happy-kids.jpg";
+import bannerImage from "@/assets/darul-ilm-stock-photo-2.jpg";
 
 export const Route = createFileRoute("/chatham")({
   head: () => ({
@@ -60,9 +60,9 @@ function Classes() {
       <section className="relative isolate h-[400px] overflow-hidden sm:h-[450px] md:h-[480px]">
         {/* Background image */}
         <img
-          src={quranClass}
+          src={bannerImage}
           alt="Children learning at Darul-ilm Kent"
-          className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
+          className="absolute inset-0 -z-30 h-full w-full object-cover object-[25%_25%]"
         />
 
         {/* Subtle overall darkening */}

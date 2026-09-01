@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageBanner } from "@/components/page-banner";
 import { GillinghamRegistrationForm } from "@/components/gillingham-registration-form";
-import quranClass from "@/assets/darul-ilm-stock-photo-1.png";
+import bannerImage from "@/assets/darul-ilm-stock-photo-3.jpg";
 
 export const Route = createFileRoute("/gillingham")({
   head: () => ({
@@ -36,7 +36,7 @@ function Gillingham() {
       <section className="relative isolate h-[400px] overflow-hidden sm:h-[450px] md:h-[480px]">
         {/* Background image */}
         <img
-          src={quranClass}
+          src={bannerImage}
           alt="Children learning at Darul-ilm Kent"
           className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
         />

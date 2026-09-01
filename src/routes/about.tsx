@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageBanner } from "@/components/page-banner";
-import classroom from "@/assets/darul-ilm-stock-photo-1.png";
+import bannerImage from "@/assets/darul-ilm-stock-photo-4.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -38,9 +38,9 @@ function About() {
       <section className="relative isolate h-[420px] overflow-hidden sm:h-[480px] md:h-[500px]">
         {/* Background image */}
         <img
-          src={classroom}
+          src={bannerImage}
           alt="Darul-ilm Kent teachers and students"
-          className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
+          className="absolute inset-0 -z-30 h-full w-full object-cover object-[25%_35%]"
         />
 
         {/* Very subtle overall darkening */}
