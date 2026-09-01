@@ -42,7 +42,12 @@ export function SiteFooter() {
             </li>
             <li>
               <Link className="hover:text-accent" to="/chatham">
-                Class information & application
+                Chatham School
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-accent" to="/gillingham">
+                Gillingham School
               </Link>
             </li>
             <li>
@@ -51,13 +56,13 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
-              <Link className="hover:text-accent" to="/gillingham">
-                Gillingham — KMWA Mosque
-              </Link>
-            </li>
-            <li>
               <a className="hover:text-accent" href="/policies">
                 Our Policies
+              </a>
+            </li>
+            <li>
+              <a className="hover:text-accent" href="/contact">
+                Contact
               </a>
             </li>
           </ul>
