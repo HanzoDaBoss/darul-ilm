@@ -53,14 +53,14 @@ function Gillingham() {
         {/* Title */}
         <div className="mx-auto flex h-full max-w-7xl items-end px-6 pb-10 sm:px-8 sm:pb-12 md:px-12 md:pb-14 lg:px-16">
           <div className="max-w-3xl">
-            {/* <p
+            <p
               className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary sm:text-base"
               style={{
                 textShadow: "0 2px 10px rgba(0,0,0,0.8)",
               }}
             >
-              New Branch
-            </p> */}
+              Our
+            </p>
 
             <h1
               className="font-display text-5xl font-bold uppercase leading-[0.9] tracking-tight text-white sm:text-6xl md:text-7xl"
@@ -68,9 +68,7 @@ function Gillingham() {
                 textShadow: "0 4px 10px rgba(0,0,0,0.9), 0 8px 30px rgba(0,0,0,0.55)",
               }}
             >
-              Gillingham
-              <br />
-              <span className="text-primary">KMWA School</span>
+              Gillingham School
             </h1>
 
             <div
@@ -86,7 +84,7 @@ function Gillingham() {
                 textShadow: "0 2px 6px rgba(0,0,0,0.9), 0 5px 18px rgba(0,0,0,0.45)",
               }}
             >
-              A place where young hearts connect with the Qur&apos;an and Deen.
+              Children&apos;s madrasah classes at Gillingham Masjid.
             </p>
           </div>
         </div>

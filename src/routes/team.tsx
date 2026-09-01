@@ -102,7 +102,7 @@ function Team() {
                 textShadow: "0 2px 10px rgba(0,0,0,0.8)",
               }}
             >
-              Our Team
+              Teachers
             </p>
 
             <h1
@@ -121,9 +121,7 @@ function Team() {
                 textShadow: "0 4px 10px rgba(0,0,0,0.9), 0 8px 30px rgba(0,0,0,0.55)",
               }}
             >
-              The Darul-ilm
-              <br />
-              <span className="text-primary">Team</span>
+              The Darul-ilm Team
             </h1>
 
             {/* Accent line */}

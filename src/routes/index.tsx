@@ -142,13 +142,13 @@ function Home() {
             {
               title: "Children's Classes",
               body: "Weekday and weekend madrasah classes for 5–16 year olds — Monday to Thursday, and Saturday & Sunday.",
-              to: "/classes" as const,
-              cta: "CLASS TIMES & FEES",
+              to: "/chatham" as const,
+              cta: "CHATHAM CLASS TIMES & FEES",
             },
             {
               title: "16+ Programs",
               body: "Join our Sanatayn programme — a two-year Islamic studies course for students 16 and over.",
-              to: "/sanatayn" as const,
+              to: "https://courses.darulilmchatham.com/courses/sanatayn" as const,
               cta: "PROGRAMME DETAILS",
             },
             {
@@ -165,6 +165,7 @@ function Home() {
                 <a
                   href={card.to}
                   className="mt-4 inline-block font-display text-base uppercase tracking-wide text-accent hover:underline"
+                  target={card.title === "16+ Programs" ? "_blank" : ""}
                 >
                   {card.cta}
                 </a>

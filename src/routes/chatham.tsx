@@ -92,7 +92,7 @@ function Classes() {
         {/* Hero content */}
         <div className="mx-auto flex h-full max-w-7xl items-end px-6 pb-10 sm:px-8 sm:pb-12 md:px-12 md:pb-14 lg:px-16">
           <div className="max-w-3xl">
-            {/* <p
+            <p
               className="
                 mb-3
                 text-sm
@@ -106,8 +106,8 @@ function Classes() {
                 textShadow: "0 2px 10px rgba(0,0,0,0.8)",
               }}
             >
-              Info
-            </p> */}
+              Our
+            </p>
 
             <h1
               className="
@@ -125,9 +125,7 @@ function Classes() {
                 textShadow: "0 4px 10px rgba(0,0,0,0.9), 0 8px 30px rgba(0,0,0,0.55)",
               }}
             >
-              Chatham
-              <br />
-              <span className="text-primary">School</span>
+              Chatham School
             </h1>
 
             <div

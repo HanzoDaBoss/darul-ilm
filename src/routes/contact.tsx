@@ -115,9 +115,7 @@ function Contact() {
                 textShadow: "0 4px 10px rgba(0,0,0,0.9), 0 8px 30px rgba(0,0,0,0.55)",
               }}
             >
-              Contact
-              <br />
-              <span className="text-primary">Us</span>
+              Contact Us
             </h1>
 
             <div

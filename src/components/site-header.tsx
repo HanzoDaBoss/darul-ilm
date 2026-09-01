@@ -109,7 +109,13 @@ export function SiteHeader() {
                         href={item.to}
                         onClick={() => setOpen(false)}
                         className="block font-display text-lg font-bold uppercase tracking-wide text-navy hover:underline"
-                        target={item.label === "Donate" || "Online Courses" ? "_blank" : ""}
+                        target={
+                          item.label === "Donate"
+                            ? "_blank"
+                            : item.label == "Online Courses"
+                              ? "_blank"
+                              : ""
+                        }
                       >
                         {item.label}
                       </a>
