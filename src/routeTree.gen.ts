@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ChathamRouteImport } from './routes/chatham'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as GillinghamRouteImport } from './routes/gillingham'
+import { Route as PoliciesRouteImport } from './routes/policies'
 import { Route as TeamRouteImport } from './routes/team'
 
 const IndexRoute = IndexRouteImport.update({
@@ -41,6 +42,11 @@ const GillinghamRoute = GillinghamRouteImport.update({
   path: '/gillingham',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PoliciesRoute = PoliciesRouteImport.update({
+  id: '/policies',
+  path: '/policies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TeamRoute = TeamRouteImport.update({
   id: '/team',
   path: '/team',
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/chatham': typeof ChathamRoute
   '/contact': typeof ContactRoute
   '/gillingham': typeof GillinghamRoute
+  '/policies': typeof PoliciesRoute
   '/team': typeof TeamRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/chatham': typeof ChathamRoute
   '/contact': typeof ContactRoute
   '/gillingham': typeof GillinghamRoute
+  '/policies': typeof PoliciesRoute
   '/team': typeof TeamRoute
 }
 export interface FileRoutesById {
@@ -70,13 +78,28 @@ export interface FileRoutesById {
   '/chatham': typeof ChathamRoute
   '/contact': typeof ContactRoute
   '/gillingham': typeof GillinghamRoute
+  '/policies': typeof PoliciesRoute
   '/team': typeof TeamRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/chatham' | '/contact' | '/gillingham' | '/team'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/chatham'
+    | '/contact'
+    | '/gillingham'
+    | '/policies'
+    | '/team'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/chatham' | '/contact' | '/gillingham' | '/team'
+  to:
+    | '/'
+    | '/about'
+    | '/chatham'
+    | '/contact'
+    | '/gillingham'
+    | '/policies'
+    | '/team'
   id:
     | '__root__'
     | '/'
@@ -84,6 +107,7 @@ export interface FileRouteTypes {
     | '/chatham'
     | '/contact'
     | '/gillingham'
+    | '/policies'
     | '/team'
   fileRoutesById: FileRoutesById
 }
@@ -93,6 +117,7 @@ export interface RootRouteChildren {
   ChathamRoute: typeof ChathamRoute
   ContactRoute: typeof ContactRoute
   GillinghamRoute: typeof GillinghamRoute
+  PoliciesRoute: typeof PoliciesRoute
   TeamRoute: typeof TeamRoute
 }
 
@@ -133,6 +158,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GillinghamRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/policies': {
+      id: '/policies'
+      path: '/policies'
+      fullPath: '/policies'
+      preLoaderRoute: typeof PoliciesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/team': {
       id: '/team'
       path: '/team'
@@ -149,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   ChathamRoute: ChathamRoute,
   ContactRoute: ContactRoute,
   GillinghamRoute: GillinghamRoute,
+  PoliciesRoute: PoliciesRoute,
   TeamRoute: TeamRoute,
 }
 export const routeTree = rootRouteImport
