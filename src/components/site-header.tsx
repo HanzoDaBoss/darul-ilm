@@ -13,7 +13,7 @@ const navPrimary = [
 ] as const;
 
 const navSecondary = [
-  { to: "/team", label: "The Darul-ilm Team" },
+  { to: "/team", label: "Darul-ilm Team" },
   // { to: "/gillingham", label: "Gillingham School" },
   // { to: "/testimonials", label: "Testimonials" },
   // { to: "/impact", label: "Impact" },

@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { Instagram, Mail, Youtube } from "lucide-react";
 
 import logo from "@/assets/darul-ilm-logo.png";
 
@@ -104,27 +105,33 @@ export function SiteFooter() {
               </a>
             </li>
             <li>
-              <a className="hover:text-accent" href="mailto:Info@darulilmchatham.com">
+              <a
+                className="flex items-center gap-2 hover:text-accent"
+                href="mailto:Info@darulilmchatham.com"
+              >
+                <Mail aria-hidden="true" className="h-4 w-4 shrink-0 -translate-y-px" />
                 Info@darulilmchatham.com
               </a>
             </li>
             <li>
               <a
-                className="hover:text-accent"
+                className="flex items-center gap-2 hover:text-accent"
                 href="https://www.youtube.com/@darul-ilmchatham4240"
                 target="_blank"
                 rel="noreferrer"
               >
+                <Youtube aria-hidden="true" className="h-4 w-4 shrink-0 -translate-y-px" />
                 YouTube channel
               </a>
             </li>
             <li>
               <a
-                className="hover:text-accent"
+                className="flex items-center gap-2 hover:text-accent"
                 href="https://www.instagram.com/darulilmchatham?igsh=YmprMzRvZm1yM3pn"
                 target="_blank"
                 rel="noreferrer"
               >
+                <Instagram aria-hidden="true" className="h-4 w-4 shrink-0 -translate-y-px" />
                 Instagram
               </a>
             </li>
