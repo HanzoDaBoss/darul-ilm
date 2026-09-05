@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import logo from "@/assets/darul-ilm-logo.png";
 import whatsAppBtn from "@/assets/whatsapp.png";
@@ -25,11 +25,30 @@ const navSecondary = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [menuMounted, setMenuMounted] = useState(false);
+  const [menuClosing, setMenuClosing] = useState(false);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openMenu = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setMenuMounted(true);
+    setMenuClosing(false);
+    setOpen(true);
+  };
+
+  const closeMenu = () => {
+    setOpen(false);
+    setMenuClosing(true);
+    closeTimer.current = setTimeout(() => {
+      setMenuMounted(false);
+      setMenuClosing(false);
+    }, 280);
+  };
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") closeMenu();
     };
     window.addEventListener("keydown", onKey);
     return () => {
@@ -37,6 +56,12 @@ export function SiteHeader() {
       window.removeEventListener("keydown", onKey);
     };
   }, [open]);
+
+  useEffect(() => {
+    return () => {
+      if (closeTimer.current) clearTimeout(closeTimer.current);
+    };
+  }, []);
 
   return (
     <>
@@ -62,7 +87,7 @@ export function SiteHeader() {
 
           <button
             type="button"
-            onClick={() => setOpen(true)}
+            onClick={openMenu}
             aria-expanded={open}
             aria-label="Open menu"
             className="inline-flex shrink-0 items-center gap-2 rounded-full border border-border px-3 py-2 text-sm font-semibold uppercase tracking-wide text-navy sm:px-4"
@@ -84,18 +109,20 @@ export function SiteHeader() {
         <span className="hidden sm:inline">WhatsApp</span>
       </a>
 
-      {open && (
-        <div className="fixed inset-0 z-50">
+      {menuMounted && (
+        <div className={`nav-overlay-fade fixed inset-0 z-50 ${menuClosing ? "nav-closing" : ""}`}>
           <button
             type="button"
             aria-label="Close menu"
-            onClick={() => setOpen(false)}
+            onClick={closeMenu}
             className="absolute inset-0 bg-navy/50"
           />
-          <nav className="absolute inset-y-0 right-0 flex h-full w-full max-w-md flex-col overflow-y-auto bg-sky-soft px-6 py-6 text-navy shadow-2xl sm:px-8">
+          <nav
+            className={`nav-slide-in absolute inset-y-0 right-0 flex h-full w-full max-w-md flex-col overflow-y-auto bg-sky-soft px-6 py-6 text-navy shadow-2xl sm:px-8 ${menuClosing ? "nav-panel-closing" : ""}`}
+          >
             <button
               type="button"
-              onClick={() => setOpen(false)}
+              onClick={closeMenu}
               aria-label="Close menu"
               className="inline-flex h-11 w-11 items-center justify-center self-start rounded-full border border-navy/20 text-navy"
             >
@@ -109,7 +136,7 @@ export function SiteHeader() {
                     <li key={item.to}>
                       <a
                         href={item.to}
-                        onClick={() => setOpen(false)}
+                        onClick={closeMenu}
                         className="block font-display text-lg font-bold uppercase tracking-wide text-navy hover:underline"
                         target={
                           item.label === "Donate"

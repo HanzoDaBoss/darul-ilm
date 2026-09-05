@@ -47,7 +47,7 @@ function Home() {
             <div className="absolute inset-x-0 bottom-0 -z-10 h-1/3 bg-gradient-to-t from-black/45 to-transparent" />
 
             <div className="mx-auto flex w-full max-w-7xl items-end px-6 pb-12 pt-16 sm:px-8 sm:pb-14 lg:px-12 lg:pb-16">
-              <div className="max-w-3xl">
+              <div className="max-w-3xl welcome-up">
                 <p
                   className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary sm:text-base"
                   style={{ textShadow: "0 2px 8px rgba(0,0,0,0.8)" }}
@@ -69,7 +69,15 @@ function Home() {
                 >
                   Raising the Next Generation by
                   <br />
-                  <span className="italic text-primary">Nurturing Hearts and Minds.</span>
+                  <span
+                    className="italic font-semibold text-primary"
+                    style={{
+                      textShadow:
+                        "0 2px 3px rgba(0,0,0,1), 0 0 5px rgba(0,0,0,0.95), 0 0 14px rgba(0,0,0,0.85)",
+                    }}
+                  >
+                    Nurturing Hearts and Minds.
+                  </span>
                 </h2>
 
                 <p
@@ -123,7 +131,7 @@ function Home() {
         </section>
       </div>
 
-      <section className="mx-auto max-w-6xl px-6 pt-16">
+      <section className="mx-auto max-w-6xl px-6 pt-16 welcome-up">
         <h2 className="heading-lg rule-accent text-navy">Who we are</h2>
         <p className="mt-4 max-w-6xl text-lg text-muted-foreground text-justify">
           Darul-Ilm Kent exists to raise children who don't just know their Dīn, but love it. Since
