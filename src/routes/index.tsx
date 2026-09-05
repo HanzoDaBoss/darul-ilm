@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
         content:
           "Darul-ilm Kent is an Islamic educational institute in Kent offering Qur'an and Islamic studies classes for children.",
       },
-      { property: "og:title", content: "Darul-ilm Kent | Islamic School in Kent" },
+      { property: "og:title", content: "Darul-ilm Kent | Maktab & Madrasa in Kent" },
       {
         property: "og:description",
         content:
