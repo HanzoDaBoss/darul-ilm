@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import logo from "@/assets/darul-ilm-logo.png";
-import whatsAppBtn from "@/assets/ChatOnWhatsAppButton/WhatsAppButtonGreenSmall.png";
+import whatsAppBtn from "@/assets/whatsapp.png";
 
 const navPrimary = [
   { to: "/", label: "Home" },
@@ -13,14 +13,14 @@ const navPrimary = [
 ] as const;
 
 const navSecondary = [
-  { to: "/team", label: "Our Teachers" },
+  { to: "/team", label: "The Darul-ilm Team" },
   // { to: "/gillingham", label: "Gillingham School" },
   // { to: "/testimonials", label: "Testimonials" },
   // { to: "/impact", label: "Impact" },
   { to: "https://courses.darulilmchatham.com/", label: "Online Courses" },
   { to: "https://www.zeffy.com/en-GB/ticketing/darul-ilm-kent-2026-pillars", label: "Donate" },
-  { to: "/contact", label: "Contact" },
-  { to: "/blog", label: "Blog" },
+  { to: "/contact", label: "Contact Us" },
+  { to: "/blog", label: "Blogs" },
 ] as const;
 
 export function SiteHeader() {
@@ -74,13 +74,14 @@ export function SiteHeader() {
       </header>
 
       <a
-        className="fixed right-5 bottom-5 max-w-40 md:max-w-50 z-50"
+        className="fixed right-5 bottom-5 z-50 inline-flex items-center gap-2 rounded-md bg-[#25D366] px-3 py-2 text-sm font-semibold shadow-md"
         aria-label="Chat on WhatsApp"
         href="https://wa.me/447778020745"
         target="_blank"
+        rel="noreferrer"
       >
-        {" "}
-        <img alt="Chat on WhatsApp" src={whatsAppBtn} />
+        <img alt="" src={whatsAppBtn} className="h-7 w-7 object-contain" />
+        <span className="hidden sm:inline">WhatsApp</span>
       </a>
 
       {open && (

@@ -229,7 +229,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-6 py-20 text-center">
+      <section className="mx-auto max-w-4xl px-6 py-10 text-center">
         <h2 className="heading-lg text-primary">Become a Pillar of the Madrasa</h2>
         <p className="mx-auto mt-4 max-w-xl text-muted-foreground text-justify">
           Not every one of us can stand in front of a classroom and teach — but every one of us can
