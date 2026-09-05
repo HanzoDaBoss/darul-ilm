@@ -43,8 +43,8 @@
   --color-sky-soft: var(--sky-soft);
   --color-sand: var(--sand);
   --color-gold: var(--gold);
-  --font-display: "Source Serif 4", Georgia, serif;
-  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Overpass", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Overpass", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {

@@ -34,14 +34,19 @@ const portableTextComponents: PortableTextComponents = {
       </h1>
     ),
     h2: ({ children }) => (
-      <h2 className="mb-5 mt-12 font-display text-3xl font-bold leading-tight text-primary">
-        {children}
-      </h2>
+      <div className="mb-5 mt-14 pt-6">
+        <div aria-hidden="true" className="mb-5 flex items-center gap-3">
+          <span className="h-1 w-12 rounded-full bg-gold" />
+          <span className="h-px flex-1 bg-gold/60" />
+        </div>
+        <h2 className="font-display text-3xl font-bold leading-tight text-primary">{children}</h2>
+      </div>
     ),
     h3: ({ children }) => (
-      <h3 className="mb-4 mt-10 font-display text-2xl font-bold leading-tight text-primary">
-        {children}
-      </h3>
+      <div className="mb-4 mt-10 pt-5">
+        <div aria-hidden="true" className="mb-4 h-px w-full bg-border" />
+        <h3 className="font-display text-2xl font-bold leading-tight text-primary">{children}</h3>
+      </div>
     ),
     h4: ({ children }) => (
       <h4 className="mb-3 mt-8 font-display text-xl font-bold leading-tight text-primary">
@@ -125,7 +130,7 @@ function BlogPost() {
       <main>
         <article className="mx-auto max-w-4xl px-6 py-14 md:py-20">
           <Link to="/blog" className="text-sm font-semibold text-primary hover:text-accent">
-            ← Back to the blog
+            ← Back
           </Link>
 
           <header className="mt-8">
