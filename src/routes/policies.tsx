@@ -47,6 +47,11 @@ const policies = [
       "Expectations, rewards and the approach we take to maintaining a positive learning environment.",
     href: "/documents/Behaviour Policy.pdf",
   },
+  {
+    title: "Fees Policy",
+    description: "Monthly fees, sibling discounts and payment arrangements.",
+    href: "/documents/Darul-ilm_Kent_Madrasah_Fees_Policy_2026-27_2.pdf",
+  },
   // {
   //   title: "Attendance",
   //   description: "Guidance on punctuality, authorised absences and reporting absence.",

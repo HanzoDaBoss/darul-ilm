@@ -206,14 +206,14 @@ function Home() {
             <h2 className="heading-lg rule-accent text-primary">Our roadmap</h2>
             <p className="mt-3 text-muted-foreground text-justify">
               Darul-ilm Kent began with only five children in February 2017, in our home on Pagitt
-              Street, Chatham. Within two years, our small two-bedroom house could no longer
-              accommodate our growing numbers, and in February 2019 we moved to a larger home in
-              Chatham. By February 2020, we had grown to more than 80 children.
+              Street, Chatham. Within two years, we had grown to 80 students, and our small
+              two-bedroom house could no longer accommodate our growing numbers. In February 2019,
+              we moved to a larger home in Chatham to keep pace with our growing madrasah.
             </p>
             <p className="mt-4 text-muted-foreground text-justify">
-              As numbers continued to rise, reaching 220 students, the space, classes, traffic, and
-              logistics of running a growing madrasah from a family home had reached their limit. It
-              was time for the next step.
+              As our numbers continued to rise, reaching 120 students by 2021, the space, classes,
+              traffic, and logistics of running a growing madrasah from a family two-bedroom home
+              had reached their limit. It was time for the next step.
             </p>
             <p className="mt-4 text-muted-foreground text-justify">
               In May 2022, we relocated our educational facilities to the Chatham Hill Masjid, where

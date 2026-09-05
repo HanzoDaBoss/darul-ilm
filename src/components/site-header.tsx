@@ -20,6 +20,7 @@ const navSecondary = [
   { to: "https://courses.darulilmchatham.com/", label: "Online Courses" },
   { to: "https://www.zeffy.com/en-GB/ticketing/darul-ilm-kent-2026-pillars", label: "Donate" },
   { to: "/contact", label: "Contact" },
+  { to: "/blog", label: "Blog" },
 ] as const;
 
 export function SiteHeader() {
