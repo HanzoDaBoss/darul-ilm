@@ -204,7 +204,7 @@ function BlogIndex() {
         ) : (
           <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_280px]">
             <div className="space-y-8">
-              <FeaturedPost post={filteredPosts[0]} />
+              {filteredPosts[0] && <FeaturedPost post={filteredPosts[0]} />}
 
               {filteredPosts.length > 1 && (
                 <div className="grid gap-8 md:grid-cols-2">

@@ -11,9 +11,13 @@ export const Route = createFileRoute("/blog/$slug")({
   head: ({ loaderData }) => ({
     meta: [
       {
-        title: loaderData?.title ? `${loaderData.title} | Darul-ilm Kent` : "Blog | Darul-ilm Kent",
+        title: loaderData?.post?.title
+          ? `${loaderData.post.title} | Darul-ilm Kent`
+          : "Blog | Darul-ilm Kent",
       },
-      ...(loaderData?.excerpt ? [{ name: "description", content: loaderData.excerpt }] : []),
+      ...(loaderData?.post?.excerpt
+        ? [{ name: "description", content: loaderData.post.excerpt }]
+        : []),
     ],
   }),
   component: BlogPost,
@@ -142,7 +146,9 @@ function BlogPost() {
                 {post.readTime || 5} min read
               </span>
             </div>
-            <h1 className="heading-xl mt-4 max-w-3xl text-primary">{post.title}</h1>
+            <h1 className="heading-xl mt-4 max-w-3xl text-primary">
+              {post.title || "Untitled article"}
+            </h1>
             {post.excerpt && (
               <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
                 {post.excerpt}
@@ -153,7 +159,7 @@ function BlogPost() {
           {post.imageUrl && (
             <img
               src={post.imageUrl}
-              alt={post.title}
+              alt={post.title || "Blog article"}
               className="mt-10 aspect-[16/9] w-full rounded-sm object-cover"
             />
           )}

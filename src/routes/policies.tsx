@@ -32,25 +32,31 @@ export const Route = createFileRoute("/policies")({
 
 const policies = [
   {
-    title: "Safeguarding Policy",
-    description: "Our commitment to protecting every child and promoting their welfare.",
-    href: "/documents/Safeguarding Policy.pdf",
-  },
-  // {
-  //   title: "Admissions",
-  //   description: "How to apply for a place, waiting list arrangements and entry criteria.",
-  //   href: "#",
-  // },
-  {
-    title: "Behaviour Policy",
+    title: "Parent Handbook",
     description:
-      "Expectations, rewards and the approach we take to maintaining a positive learning environment.",
-    href: "/documents/Behaviour Policy.pdf",
+      "Information for parents and guardians about Darul-ilm Kent, including our ethos, curriculum and expectations.",
+    href: "/documents/Darul-ilm-Kent-Parent-Handbook.pdf",
+  },
+  {
+    title: "Code of Conduct Policy",
+    description: "Our commitment to protecting every child and promoting their welfare.",
+    href: "/documents/Darul-ilm_Kent_Parents_Code_of_Conduct.pdf",
   },
   {
     title: "Fees Policy",
     description: "Monthly fees, sibling discounts and payment arrangements.",
     href: "/documents/Darul-ilm_Kent_Madrasah_Fees_Policy_2026-27_2.pdf",
+  },
+  {
+    title: "Safeguarding Policy",
+    description: "Our commitment to protecting every child and promoting their welfare.",
+    href: "/documents/Safeguarding Policy.pdf",
+  },
+  {
+    title: "Behaviour Policy",
+    description:
+      "Expectations, rewards and the approach we take to maintaining a positive learning environment.",
+    href: "/documents/Behaviour Policy.pdf",
   },
   // {
   //   title: "Attendance",
