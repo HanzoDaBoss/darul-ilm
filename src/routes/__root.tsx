@@ -78,6 +78,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        name: "google-site-verification",
+        content: "hSMOgJTmT-gvqqvjP7Er_ybGgKV9Nk4Q12j0HfvN0fM",
+      },
       { title: "Darul-ilm Kent | Maktab & Madrasa in Kent" },
       {
         name: "description",
