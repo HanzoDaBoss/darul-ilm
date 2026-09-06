@@ -4,29 +4,16 @@ import { FileText } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import quranClass from "@/assets/darul-ilm-stock-photo-5.jpg";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/policies")({
-  head: () => ({
-    meta: [
-      { title: "Policies & Documents | Darul-ilm Kent" },
-      {
-        name: "description",
-        content:
-          "Key policies and documents for Darul-ilm Kent, including safeguarding, admissions, behaviour, attendance and GDPR.",
-      },
-      {
-        property: "og:title",
-        content: "Policies & Documents | Darul-ilm Kent",
-      },
-      {
-        property: "og:description",
-        content:
-          "Download Darul-ilm Kent safeguarding, admissions, behaviour and other key policy documents.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "Policies & Documents | Darul-ilm Kent",
+      description:
+        "Key policies and documents for Darul-ilm Kent, including safeguarding, admissions, behaviour, attendance and GDPR.",
+      path: "/policies",
+    }),
   component: Policies,
 });
 

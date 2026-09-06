@@ -6,23 +6,17 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getPosts, type PostSummary } from "@/sanity/queries";
 import quranClass from "@/assets/darul-ilm-stock-photo-5.jpg";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog/")({
   loader: () => getPosts(),
-  head: () => ({
-    meta: [
-      { title: "Blog | Darul-ilm Kent" },
-      {
-        name: "description",
-        content: "News, reflections and updates from Darul-ilm Kent, serving the Medway community.",
-      },
-      { property: "og:title", content: "Blog | Darul-ilm Kent" },
-      {
-        property: "og:description",
-        content: "News, reflections and updates from Darul-ilm Kent.",
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "Blog | Darul-ilm Kent",
+      description:
+        "News, reflections and updates from Darul-ilm Kent, serving the Medway community.",
+      path: "/blog",
+    }),
   component: BlogIndex,
 });
 

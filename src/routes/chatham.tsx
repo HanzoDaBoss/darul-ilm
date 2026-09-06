@@ -5,27 +5,16 @@ import { SiteFooter } from "@/components/site-footer";
 import { PageBanner } from "@/components/page-banner";
 import { ChathamRegistrationForm } from "@/components/chatham-registration-form";
 import bannerImage from "@/assets/darul-ilm-stock-photo-2.jpg";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/chatham")({
-  head: () => ({
-    meta: [
-      { title: "Chatham School | Darul-ilm Chatham" },
-      {
-        name: "description",
-        content:
-          "Weekday and weekend madrasah class times, monthly fees and the registration form for Darul-ilm Chatham children's classes.",
-      },
-      {
-        property: "og:title",
-        content: "Class Information & Application | Darul-ilm Chatham",
-      },
-      {
-        property: "og:description",
-        content:
-          "Four class options across weekdays and weekends. Fees from £50 per month. Join our waiting list online.",
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "Chatham Classes & Application | Darul-ilm Kent",
+      description:
+        "Weekday and weekend madrasah class times, monthly fees and registration for Darul-ilm Kent children's classes in Chatham.",
+      path: "/chatham",
+    }),
   component: Classes,
 });
 

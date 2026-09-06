@@ -5,27 +5,16 @@ import { SiteFooter } from "@/components/site-footer";
 import { PageBanner } from "@/components/page-banner";
 import { GillinghamRegistrationForm } from "@/components/gillingham-registration-form";
 import bannerImage from "@/assets/darul-ilm-stock-photo-3.jpg";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/gillingham")({
-  head: () => ({
-    meta: [
-      { title: "New Gillingham (KMWA) Branch | Darul-ilm Chatham" },
-      {
-        name: "description",
-        content:
-          "Our new Darul-ilm branch at KMWA, 114 Canterbury St, Gillingham ME7 5UH. Class times, fees from £50 per month and enrolment details.",
-      },
-      {
-        property: "og:title",
-        content: "New Gillingham (KMWA) Branch | Darul-ilm Chatham",
-      },
-      {
-        property: "og:description",
-        content:
-          "Qur'an recitation, memorisation and Islamic studies for 5–16 year olds at our new Gillingham branch. Limited spaces available.",
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "Gillingham Classes & Application | Darul-ilm Kent",
+      description:
+        "Class times, fees and enrolment for Qur'an and Islamic studies at Darul-ilm Kent's Gillingham branch, KMWA, 114 Canterbury St.",
+      path: "/gillingham",
+    }),
   component: Gillingham,
 });
 

@@ -4,24 +4,16 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageBanner } from "@/components/page-banner";
 import bannerImage from "@/assets/darul-ilm-stock-photo-4.jpg";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About Us | Darul-ilm Chatham" },
-      {
-        name: "description",
-        content:
-          "Learn about Darul-ilm Chatham: our aim, our history from five children in 2017 to our home at Chatham Hill Masjid, and our values.",
-      },
-      { property: "og:title", content: "About Us | Darul-ilm Chatham" },
-      {
-        property: "og:description",
-        content:
-          "Our aim is to fulfil the religious educational needs of Medway through a professional Islamic institute run by qualified scholars.",
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "About Us | Darul-ilm Kent",
+      description:
+        "Learn about Darul-ilm Kent, our history from five children in 2017 to two sites across Medway, and our values.",
+      path: "/about",
+    }),
   component: About,
 });
 

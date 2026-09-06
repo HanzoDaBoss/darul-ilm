@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { organisationSchema } from "../lib/seo";
 
 function NotFoundComponent() {
   return (
@@ -77,23 +78,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Darul-ilm Chatham | Islamic School in Medway" },
+      { title: "Darul-ilm Kent | Maktab & Madrasa in Kent" },
       {
         name: "description",
         content:
-          "Darul-ilm Chatham is an Islamic educational institute delivering Qur'an and Islamic studies classes to children across Medway.",
+          "Darul-ilm Kent is an Islamic educational institute offering Qur'an and Islamic studies classes for children across Medway.",
       },
-      { name: "author", content: "Darul-ilm Chatham" },
-      { property: "og:title", content: "Darul-ilm Chatham" },
+      { name: "author", content: "Darul-ilm Kent" },
+      { property: "og:title", content: "Darul-ilm Kent" },
       {
         property: "og:description",
-        content: "Islamic education for the Medway community.",
+        content: "Islamic education for children and families across Medway.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
+        scripts: [
+          {
+            type: "application/ld+json",
+            children: JSON.stringify(organisationSchema),
+          },
+        ],
         rel: "stylesheet",
         href: appCss,
       },

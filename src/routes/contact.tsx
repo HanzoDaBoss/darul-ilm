@@ -7,24 +7,16 @@ import { SiteFooter } from "@/components/site-footer";
 import { PageBanner } from "@/components/page-banner";
 import MapComponent from "@/components/map";
 import quranClass from "@/assets/darul-ilm-stock-photo-1.png";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact Us | Darul-ilm Chatham" },
-      {
-        name: "description",
-        content:
-          "Contact Darul-ilm Chatham by phone, WhatsApp or email for class enquiries, enrolment and volunteering opportunities in Medway.",
-      },
-      { property: "og:title", content: "Contact Us | Darul-ilm Chatham" },
-      {
-        property: "og:description",
-        content:
-          "Call Imam Didar on 07534 979369, our administrator on 07778 200746, or email Info@darulilmchatham.com.",
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "Contact Us | Darul-ilm Kent",
+      description:
+        "Contact Darul-ilm Kent by phone, WhatsApp or email for class enquiries, enrolment and volunteering opportunities in Medway.",
+      path: "/contact",
+    }),
   component: Contact,
 });
 

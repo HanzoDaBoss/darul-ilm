@@ -5,21 +5,20 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getPostBySlug } from "@/sanity/queries";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => getPostBySlug(params.slug),
-  head: ({ loaderData }) => ({
-    meta: [
-      {
-        title: loaderData?.post?.title
-          ? `${loaderData.post.title} | Darul-ilm Kent`
-          : "Blog | Darul-ilm Kent",
-      },
-      ...(loaderData?.post?.excerpt
-        ? [{ name: "description", content: loaderData.post.excerpt }]
-        : []),
-    ],
-  }),
+  head: ({ loaderData, params }) =>
+    seoHead({
+      title: loaderData?.post?.title
+        ? `${loaderData.post.title} | Darul-ilm Kent`
+        : "Blog | Darul-ilm Kent",
+      description:
+        loaderData?.post?.excerpt ||
+        "News, reflections and updates from Darul-ilm Kent, serving the Medway community.",
+      path: `/blog/${params.slug}`,
+    }),
   component: BlogPost,
 });
 

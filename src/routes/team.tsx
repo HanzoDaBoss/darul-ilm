@@ -4,24 +4,16 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageBanner } from "@/components/page-banner";
 import bannerImage from "@/assets/class-photo.jpg";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/team")({
-  head: () => ({
-    meta: [
-      { title: "The Darul-ilm Team | Darul-ilm Chatham" },
-      {
-        name: "description",
-        content:
-          "Meet the qualified scholars and teachers of Darul-ilm Chatham, including Mufti Didar Hasan, Mufti Mehdi Hasan and Alimah Zulfa Tanzim.",
-      },
-      { property: "og:title", content: "The Darul-ilm Team | Darul-ilm Chatham" },
-      {
-        property: "og:description",
-        content:
-          "Our teachers are graduates of the six-year 'Alimiyyah course with further specialisation in the Islamic sciences.",
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "The Darul-ilm Team | Darul-ilm Kent",
+      description:
+        "Meet the qualified scholars and teachers of Darul-ilm Kent, serving children and families across Medway.",
+      path: "/team",
+    }),
   component: Team,
 });
 

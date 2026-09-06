@@ -5,24 +5,16 @@ import { SiteFooter } from "@/components/site-footer";
 import quranClass from "@/assets/happy-kids.jpg";
 import classroom from "@/assets/darul-ilm-stock-photo-1.png";
 import { MapPin } from "lucide-react";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Darul-ilm Kent | Maktab & Madrasa in Kent" },
-      {
-        name: "description",
-        content:
-          "Darul-ilm Kent is an Islamic educational institute in Kent offering Qur'an and Islamic studies classes for children.",
-      },
-      { property: "og:title", content: "Darul-ilm Kent | Maktab & Madrasa in Kent" },
-      {
-        property: "og:description",
-        content:
-          "Weekday and weekend madrasah classes for ages 5-16, taught by qualified Islamic scholars in Kent.",
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "Darul-ilm Kent | Maktab & Madrasa in Kent",
+      description:
+        "Weekday and weekend madrasah classes for ages 5-16, taught by qualified Islamic scholars across Medway.",
+      path: "/",
+    }),
   component: Home,
 });
 
