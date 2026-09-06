@@ -38,7 +38,7 @@ const policies = [
     href: "/documents/Darul-ilm-Kent-Parent-Handbook.pdf",
   },
   {
-    title: "Code of Conduct Policy",
+    title: "Parent Code of Conduct Policy",
     description: "Our commitment to protecting every child and promoting their welfare.",
     href: "/documents/Darul-ilm_Kent_Parents_Code_of_Conduct.pdf",
   },
