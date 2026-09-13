@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://darulilmchatham.com/sitemap.xml
+Sitemap: https://school.darulilmkent.org/sitemap.xml
