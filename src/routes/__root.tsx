@@ -82,17 +82,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         name: "google-site-verification",
         content: "hSMOgJTmT-gvqqvjP7Er_ybGgKV9Nk4Q12j0HfvN0fM",
       },
-      { title: "Darul-ilm Community | Medway" },
+      { title: "Darul-ilm Kent | Maktab & Madrasa in Kent" },
       {
         name: "description",
         content:
-          "Darul-ilm Community connects families across Medway with education, welfare, food support and spiritual gatherings.",
+          "Darul-ilm Kent is an Islamic educational institute offering Qur'an and Islamic studies classes for children across Medway.",
       },
-      { name: "author", content: "Darul-ilm Community" },
-      { property: "og:title", content: "Darul-ilm Community" },
+      { name: "author", content: "Darul-ilm Kent" },
+      { property: "og:title", content: "Darul-ilm Kent" },
       {
         property: "og:description",
-        content: "Education, welfare and spiritual connection for the Medway community.",
+        content: "Islamic education for children and families across Medway.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

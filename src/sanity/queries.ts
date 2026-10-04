@@ -1,6 +1,5 @@
 import { defineQuery } from "groq";
 
-import type { CommunityEvent } from "@/lib/community-events";
 import { sanityClient } from "./client";
 
 export const postsQuery =
@@ -29,21 +28,6 @@ export const postBySlugQuery = defineQuery(`*[_type == "post" && slug.current ==
   body
 }`);
 
-export const communityEventsQuery =
-  defineQuery(`*[_type == "communityEvent" && defined(slug.current)] | order(start asc) {
-  _id,
-  title,
-  "slug": slug.current,
-  description,
-  start,
-  end,
-  repeatWeekly,
-  location,
-  organiser,
-  status,
-  updatedAt
-}`);
-
 export type PostSummary = {
   _id: string;
   title: string;
@@ -58,14 +42,6 @@ export type PostSummary = {
 
 export function getPosts() {
   return sanityClient.fetch<PostSummary[]>(postsQuery);
-}
-
-export function getCommunityEvents() {
-  return sanityClient.fetch<CommunityEvent[]>(
-    communityEventsQuery,
-    {},
-    { perspective: "published", useCdn: false },
-  );
 }
 
 export function getPostBySlug(slug: string) {

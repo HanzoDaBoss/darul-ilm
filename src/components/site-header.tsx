@@ -7,21 +7,18 @@ import whatsAppBtn from "@/assets/whatsapp.png";
 
 const navPrimary = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About us" },
-  { to: "/halaqas", label: "Spirituality" },
-  { to: "/madrasa", label: "Education" },
-  { to: "/zakat", label: "Zakat Fund" },
-  { to: "/food-bank", label: "Food Bank" },
-  { to: "/family-support", label: "Family and Marriage Support" },
-  { to: "/dawah", label: "Da'wah" },
-  { to: "/media", label: "Media" },
-  { to: "/youth", label: "Youth and Children" },
+  { to: "/about", label: "About Us" },
+  { to: "/chatham", label: "Chatham School" },
+  { to: "/gillingham", label: "Gillingham School" },
 ] as const;
 
 const navSecondary = [
-  { to: "/events", label: "What's on" },
-  { to: "/get-involved", label: "Get involved" },
-  { to: "/donate", label: "Donate" },
+  { to: "/team", label: "Darul-ilm Team" },
+  // { to: "/gillingham", label: "Gillingham School" },
+  // { to: "/testimonials", label: "Testimonials" },
+  // { to: "/impact", label: "Impact" },
+  { to: "https://courses.darulilmchatham.com/", label: "Online Courses" },
+  { to: "https://www.zeffy.com/en-GB/ticketing/darul-ilm-kent-2026-pillars", label: "Donate" },
   { to: "/contact", label: "Contact Us" },
   { to: "/blog", label: "Blogs" },
 ] as const;
@@ -80,7 +77,7 @@ export function SiteHeader() {
             />
             <span className="leading-tight">
               <span className="block font-display text-base font-bold text-navy sm:text-xl">
-                Darul-ilm Community
+                Darul-ilm Kent
               </span>
               <span className="block font-display text-xs italic text-muted-foreground sm:text-sm">
                 House of Knowledge
@@ -141,6 +138,13 @@ export function SiteHeader() {
                         href={item.to}
                         onClick={closeMenu}
                         className="block font-display text-lg font-bold uppercase tracking-wide text-navy hover:underline"
+                        target={
+                          item.label === "Donate"
+                            ? "_blank"
+                            : item.label == "Online Courses"
+                              ? "_blank"
+                              : ""
+                        }
                       >
                         {item.label}
                       </a>
@@ -152,19 +156,16 @@ export function SiteHeader() {
 
             <div className="flex flex-col gap-1 sm:gap-3 mt-auto">
               <a
-                href="https://school.darulilmkent.org"
-                target="_blank"
-                rel="noreferrer"
-                className="btn-pill mt-10 w-full text-center"
+                href="/chatham#apply"
+                className="btn-pill mt-10 w-full text-center sm:mt-autotext-md"
               >
-                Children&apos;s madrasa website
+                Apply at Chatham
               </a>
               <a
-                href="/get-involved#volunteer"
-                onClick={closeMenu}
-                className="btn-pill-ghost mt-3 w-full text-center"
+                href="/gillingham#apply"
+                className="btn-pill-ghost mt-5 w-full text-center sm:mt-auto"
               >
-                Become a volunteer
+                Apply at Gillingham
               </a>
             </div>
             {/* <a

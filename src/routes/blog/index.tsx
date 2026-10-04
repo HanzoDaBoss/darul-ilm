@@ -37,7 +37,7 @@ function BlogIndex() {
   });
 
   return (
-    <div className="min-h-screen blog-route">
+    <div className="min-h-screen">
       <SiteHeader />
       {/* <PageBanner
         eyebrow="From Darul-ilm Kent"
